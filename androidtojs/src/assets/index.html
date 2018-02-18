@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>JS和Android交互</title>
+    </head>
+    <body>
+        <script language="JavaScript">
+            //这个方法与java约定好的方法 目的是让java调用
+            function java_call_js(param){
+                var x=document.getElementById("test");
+                x.innerHTML="new Text----"+param;
+            }
+            //绑定html按钮的方法 调用android中的方法
+            function btn_js(){
+                  jsInterface.js_call_java();
+            }
+        </script>
+        <input type="button" style="height:60px;width:240px;margin-top:40px;margin-bottom:10px"
+        value="(Js call Java) button in html" onclick="btn_js()">
+        <div id="test">
+            <font color="#00aa00" size="5">old text</font>
+        </div>
+    </body>
+</html>

@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         // 绑定  ListView
         listItem = (ListView) findViewById(R.id.list_item);
 
+
         // 设置Adapter
         adapter = new ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1, getData());
         listItem.setAdapter(adapter);
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 case 1:
 
                     //点击完成
-
+                    
                     //删除数据
                     SPHelper.delNode(MainActivity.this, item);
 

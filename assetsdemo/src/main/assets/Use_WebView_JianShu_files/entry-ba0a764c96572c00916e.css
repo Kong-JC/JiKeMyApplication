@@ -1,0 +1,1569 @@
+#note-content-divide {
+	margin: 20px 0px; height: 31px; text-align: center; position: relative; -ms-user-select: none; -webkit-user-select: none; -moz-user-select: none; user-select: none;
+}
+#note-content-divide .line {
+	top: 15px; width: 100%; height: 1px; position: absolute; z-index: 0; background-color: rgb(187, 187, 187);
+}
+#note-content-divide .content {
+	margin: 0px auto; padding: 0px 10px; color: rgb(187, 187, 187); line-height: 31px; font-size: 14px; display: inline-block; position: relative; z-index: 1; background-color: rgb(255, 255, 255);
+}
+body.reader-night-mode #note-content-divide .content {
+	background-color: rgb(63, 63, 63);
+}
+.note {
+	padding-top: 10px; position: relative;
+}
+.note #web-note-ad-fixed {
+	background-position: 50%; top: 80px; width: 180px; height: 220px; display: none; position: fixed; background-image: url("//cdn2.jianshu.io/assets/web/web-note-ad-2-34aca030621fb9127ddd544eedfebb30.png"); background-repeat: no-repeat; background-size: contain;
+}
+.note #web-note-ad-fixed .close {
+	top: 10px; width: 20px; height: 20px; right: 10px; color: rgb(153, 153, 153); display: block; position: absolute;
+}
+.note #web-note-ad-fixed .close:hover {
+	color: rgb(51, 51, 51);
+}
+.note .post {
+	margin: 0px auto; width: 620px; padding-top: 20px; padding-bottom: 40px;
+}
+.note .post .article .title {
+	margin: 20px 0px 0px; line-height: 1.3; font-family: -apple-system,SF UI Display,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif; font-size: 34px; font-weight: 700; -ms-word-break: break-all;
+}
+.note .post .article .author {
+	margin: 30px 0px 40px;
+}
+.note .post .article .author .avatar {
+	width: 48px; height: 48px; vertical-align: middle; display: inline-block;
+}
+.note .post .article .author .info {
+	margin-left: 8px; vertical-align: middle; display: inline-block;
+}
+.note .post .article .author .info img.badge-icon {
+	border-radius: 0px; border: 0px currentColor; border-image: none; width: 20px; height: 20px; margin-right: 5px;
+}
+.note .post .article .author .name {
+	font-size: 16px; margin-right: 3px; vertical-align: middle;
+}
+.note .post .article .follow {
+	padding: 0px 7px 0px 5px; font-size: 12px;
+}
+.note .post .article .follow-cancel {
+	padding: 0px 7px 0px 5px; font-size: 12px;
+}
+.note .post .article .follow-each {
+	padding: 0px 7px 0px 5px; font-size: 12px;
+}
+.note .post .article .following {
+	padding: 0px 7px 0px 5px; font-size: 12px;
+}
+.note .post .article .user-follow-button-header {
+	padding: 0px 7px 0px 5px; font-size: 12px;
+}
+.note .post .article .author .meta {
+	color: rgb(150, 150, 150); font-size: 12px; margin-top: 5px;
+}
+.note .post .article .author .meta span {
+	padding-right: 5px;
+}
+.note .post .article .author .edit {
+	padding: 0px 12px; border-radius: 50px; border: 1px solid rgb(220, 220, 220); border-image: none; color: rgb(155, 155, 155); line-height: 30px; font-size: 14px; margin-top: 8px; float: right;
+}
+.note .post .article .author .edit:hover {
+	background-color: hsla(0, 0%, 71%, 0.1);
+}
+.note .post .article .show-content {
+	color: rgb(47, 47, 47); line-height: 1.7; font-size: 16px; font-weight: 400; -ms-word-break: break-all;
+}
+.note .post .article .show-content p {
+	margin: 0px 0px 25px;
+}
+.note .post .article .show-content blockquote h1:last-child {
+	margin-bottom: 0px;
+}
+.note .post .article .show-content blockquote h2:last-child {
+	margin-bottom: 0px;
+}
+.note .post .article .show-content blockquote h3:last-child {
+	margin-bottom: 0px;
+}
+.note .post .article .show-content blockquote h4:last-child {
+	margin-bottom: 0px;
+}
+.note .post .article .show-content blockquote h5:last-child {
+	margin-bottom: 0px;
+}
+.note .post .article .show-content blockquote h6:last-child {
+	margin-bottom: 0px;
+}
+.note .post .article .show-content blockquote li:last-child {
+	margin-bottom: 0px;
+}
+.note .post .article .show-content blockquote ol:last-child {
+	margin-bottom: 0px;
+}
+.note .post .article .show-content blockquote p:last-child {
+	margin-bottom: 0px;
+}
+.note .post .article .show-content blockquote ul:last-child {
+	margin-bottom: 0px;
+}
+.note .post .article .show-content .video-package .video-description p {
+	margin: 0px;
+}
+.note .post .article .show-content li p {
+	overflow: visible;
+}
+.note .post .article .show-content a {
+	color: rgb(49, 148, 208);
+}
+.note .post .article .show-content a:hover {
+	color: rgb(49, 148, 208); text-decoration: underline;
+}
+.note .post .article .show-content a.active {
+	color: rgb(49, 148, 208);
+}
+.note .post .article .show-content a:active {
+	color: rgb(49, 148, 208);
+}
+.note .post .article .show-content a:focus {
+	color: rgb(49, 148, 208);
+}
+.note .post .article .show-content a.disabled {
+	color: rgb(245, 245, 245); cursor: not-allowed;
+}
+.note .post .article .show-content a.disabled.active {
+	color: rgb(245, 245, 245); cursor: not-allowed;
+}
+.note .post .article .show-content a.disabled:active {
+	color: rgb(245, 245, 245); cursor: not-allowed;
+}
+.note .post .article .show-content a.disabled:focus {
+	color: rgb(245, 245, 245); cursor: not-allowed;
+}
+.note .post .article .show-content a.disabled:hover {
+	color: rgb(245, 245, 245); cursor: not-allowed;
+}
+.note .post .article .show-content a[disabled] {
+	color: rgb(245, 245, 245); cursor: not-allowed;
+}
+.note .post .article .show-content a[disabled].active {
+	color: rgb(245, 245, 245); cursor: not-allowed;
+}
+.note .post .article .show-content a[disabled]:active {
+	color: rgb(245, 245, 245); cursor: not-allowed;
+}
+.note .post .article .show-content a[disabled]:focus {
+	color: rgb(245, 245, 245); cursor: not-allowed;
+}
+.note .post .article .show-content a[disabled]:hover {
+	color: rgb(245, 245, 245); cursor: not-allowed;
+}
+.note .post .article .show-content ol {
+	-ms-word-break: break-all;
+}
+.note .post .article .show-content p {
+	-ms-word-break: break-all;
+}
+.note .post .article .show-content ul {
+	-ms-word-break: break-all;
+}
+.note .post .article .show-content hr {
+	margin: 0px 0px 20px; border-top-color: rgb(221, 221, 221); border-top-width: 1px; border-top-style: solid;
+}
+.note .post .article .show-content h1 {
+	margin: 0px 0px 15px; color: rgb(47, 47, 47); line-height: 1.7; font-weight: 700; text-rendering: optimizelegibility;
+}
+.note .post .article .show-content h2 {
+	margin: 0px 0px 15px; color: rgb(47, 47, 47); line-height: 1.7; font-weight: 700; text-rendering: optimizelegibility;
+}
+.note .post .article .show-content h3 {
+	margin: 0px 0px 15px; color: rgb(47, 47, 47); line-height: 1.7; font-weight: 700; text-rendering: optimizelegibility;
+}
+.note .post .article .show-content h4 {
+	margin: 0px 0px 15px; color: rgb(47, 47, 47); line-height: 1.7; font-weight: 700; text-rendering: optimizelegibility;
+}
+.note .post .article .show-content h5 {
+	margin: 0px 0px 15px; color: rgb(47, 47, 47); line-height: 1.7; font-weight: 700; text-rendering: optimizelegibility;
+}
+.note .post .article .show-content h6 {
+	margin: 0px 0px 15px; color: rgb(47, 47, 47); line-height: 1.7; font-weight: 700; text-rendering: optimizelegibility;
+}
+.note .post .article .show-content h1 {
+	font-size: 26px;
+}
+.note .post .article .show-content h2 {
+	font-size: 24px;
+}
+.note .post .article .show-content h3 {
+	font-size: 22px;
+}
+.note .post .article .show-content h4 {
+	font-size: 20px;
+}
+.note .post .article .show-content h5 {
+	font-size: 18px;
+}
+.note .post .article .show-content h6 {
+	font-size: 16px;
+}
+.note .post .article .show-content img {
+	max-width: 100%;
+}
+.note .post .article .show-content blockquote {
+	padding: 20px; line-height: 30px; font-size: 16px; font-weight: 400; margin-bottom: 25px; border-left-color: rgb(180, 180, 180); border-left-width: 6px; border-left-style: solid; -ms-word-break: break-all; background-color: rgb(247, 247, 247);
+}
+.note .post .article .show-content blockquote p {
+	line-height: 1.7; font-size: 16px; font-weight: 400;
+}
+.note .post .article .show-content blockquote .image-package {
+	width: auto; margin-left: 0px;
+}
+.note .post .article .show-content ol {
+	padding: 0px; margin-bottom: 20px; margin-left: 22px;
+}
+.note .post .article .show-content ul {
+	padding: 0px; margin-bottom: 20px; margin-left: 22px;
+}
+.note .post .article .show-content ol li {
+	line-height: 30px; margin-bottom: 10px;
+}
+.note .post .article .show-content ul li {
+	line-height: 30px; margin-bottom: 10px;
+}
+.note .post .article .show-content ol li ol {
+	margin-top: 15px;
+}
+.note .post .article .show-content ol li ul {
+	margin-top: 15px;
+}
+.note .post .article .show-content ul li ol {
+	margin-top: 15px;
+}
+.note .post .article .show-content ul li ul {
+	margin-top: 15px;
+}
+.note .post .article .show-content ol .image-package {
+	width: auto !important; margin-left: 0px !important;
+}
+.note .post .article .show-content ul .image-package {
+	width: auto !important; margin-left: 0px !important;
+}
+.note .post .article .show-content pre {
+	padding: 15px; border-radius: 0px; overflow: auto; font-size: 13px; margin-bottom: 20px; white-space: pre; -ms-word-break: break-all; -ms-word-wrap: normal;
+}
+.note .post .article .show-content pre code {
+	padding: 0px; white-space: pre; background-color: transparent;
+}
+.note .post .article .show-content code {
+	padding: 2px 4px; border: currentColor; border-image: none; color: rgb(101, 123, 131); font-size: 12px; white-space: pre-wrap; background-color: rgb(246, 246, 246);
+}
+.note .post .article .show-content table {
+	border-width: 1px 1px 1px medium; border-style: solid solid solid none; border-color: rgb(221, 221, 221) rgb(221, 221, 221) rgb(221, 221, 221) currentColor; border-image: none; width: 100%; margin-bottom: 20px; border-collapse: collapse; -ms-word-break: normal;
+}
+.note .post .article .show-content table tr:nth-of-type(2n) {
+	background-color: hsla(0, 0%, 71%, 0.1);
+}
+.note .post .article .show-content table thead th {
+	text-align: inherit; vertical-align: middle;
+}
+.note .post .article .show-content table td {
+	padding: 8px; border: 1px solid rgb(221, 221, 221); border-image: none; line-height: 20px; vertical-align: middle;
+}
+.note .post .article .show-content table th {
+	padding: 8px; border: 1px solid rgb(221, 221, 221); border-image: none; line-height: 20px; vertical-align: middle;
+}
+.note .post .article .show-content table th {
+	font-weight: 700;
+}
+.note .post .article .show-content table .image-package {
+	width: auto; margin-left: 0px;
+}
+.note .post .article .show-content .image-package .image-container {
+	margin: 0px auto; transition:background-color 0.1s linear; position: relative; z-index: 100; background-color: rgb(238, 238, 238);
+}
+.note .post .article .show-content .image-package .image-container .image-container-fill {
+	z-index: 50;
+}
+.note .post .article .show-content .image-package .image-container .image-view {
+	left: 0px; top: 0px; width: 100%; height: 100%; overflow: hidden; position: absolute;
+}
+.note .post .article .show-content .image-package .image-container .image-view img.image-loading {
+	opacity: 0.3; -webkit-filter: blur(4px);
+}
+.note .post .article .show-content .image-package .image-container .image-view img {
+	transition:0.15s linear; z-index: 100; opacity: 1; -webkit-filter: blur(0);
+}
+.note .post .article .show-content .image-package {
+	width: 700px; text-align: center; padding-bottom: 25px; margin-left: -40px;
+}
+.note .post .article .show-content .image-package img {
+	border: 0px currentColor; transition:0.25s ease-in-out; border-image: none; height: auto; vertical-align: middle; max-width: 100%;
+}
+.note .post .article .show-content .image-package .image-caption {
+	margin: 0px auto; padding: 10px; color: rgb(150, 150, 150); line-height: 1.7; font-size: 14px; border-bottom-color: rgb(217, 217, 217); border-bottom-width: 1px; border-bottom-style: solid; display: inline-block; min-height: 22px; min-width: 20%; max-width: 80%;
+}
+.note .post .article .show-content .image-package :empty.image-caption {
+	display: none;
+}
+.note .post .article .show-content .video-package {
+	margin: -20px auto 20px; text-align: center; position: relative;
+}
+.note .post .article .show-content .video-package .video-placeholder-area {
+	padding: 10px 10px 10px 120px; border: 1px solid rgb(217, 217, 217); border-image: none; height: 110px; text-align: left; display: inline-block; position: relative; cursor: pointer; box-sizing: border-box; background-color: hsla(0, 0%, 71%, 0.1);
+}
+.note .post .article .show-content .video-package .video-placeholder-area::after {
+	background-position: 30px; transition:0.1s linear; left: -1px; top: -1px; width: 110px; height: 110px; display: block; position: absolute; content: " "; background-image: url("//cdn2.jianshu.io/assets/common/play-btn-c4bc06b9dfe063495b6b8277b14bc5c3.png"); background-repeat: no-repeat; background-size: 50px; background-color: rgba(0, 0, 0, 0.3);
+}
+.note .post .article .show-content .video-package .video-placeholder-area:hover::after {
+	background-color: transparent;
+}
+.note .post .article .show-content .video-package .video-placeholder-area .video-cover {
+	transition:opacity 0.1s linear; left: -1px; top: -1px; width: 110px; height: 110px; display: block; position: absolute; opacity: 0.8;
+}
+.note .post .article .show-content .video-package .video-description {
+	margin: 0px auto; padding: 10px; color: rgb(153, 153, 153); line-height: 1.7; font-size: 13px; border-bottom-color: rgb(217, 217, 217); border-bottom-width: 1px; border-bottom-style: solid; display: none; min-height: 22px; min-width: 20%;
+}
+.note .post .article .show-content .video-package :empty.video-description {
+	display: none;
+}
+.note .post .article .show-content .video-package .video-close-button {
+	padding: 0px; transition:opacity 0.1s linear; text-align: left; line-height: 14px; font-size: 14px; cursor: pointer;
+}
+.note .post .article .show-content .video-package .video-provider-button {
+	padding: 0px; transition:opacity 0.1s linear; text-align: left; line-height: 14px; font-size: 14px; cursor: pointer;
+}
+.note .post .article .show-content .video-package .video-close-button i {
+	top: 1px; position: relative;
+}
+.note .post .article .show-content .video-package .video-provider-button i {
+	top: 1px; position: relative;
+}
+.note .post .article .show-content .video-package .video-provider-button {
+	float: right;
+}
+.note .post .article .show-content-paid {
+	-ms-user-select: none; -webkit-user-select: none; -moz-user-select: none; user-select: none;
+}
+.note .post .book-menu {
+	margin: 40px 0px 20px; border-radius: 5px; border: 1px solid rgb(224, 224, 224); border-image: none; height: 50px; overflow: hidden; font-size: 0px; background-color: hsla(0, 0%, 71%, 0.1);
+}
+body.reader-night-mode .note .post .book-menu {
+	border-color: rgb(47, 47, 47);
+}
+.note .post .book-menu .menu-item {
+	width: 33.33%; height: 100%; text-align: center; color: rgb(51, 51, 51); line-height: 48px; font-size: 16px; border-right-color: rgb(224, 224, 224); border-right-width: 1px; border-right-style: solid; display: inline-block;
+}
+body.reader-night-mode .note .post .book-menu .menu-item {
+	border-color: rgb(47, 47, 47); color: rgb(200, 200, 200);
+}
+.note .post .book-menu :last-of-type.menu-item {
+	border-right-color: currentColor; border-right-width: medium; border-right-style: none;
+}
+.note .post .book-menu .menu-item a {
+	width: 100%; color: rgb(51, 51, 51); display: inline-block;
+}
+body.reader-night-mode .note .post .book-menu .menu-item a {
+	color: rgb(200, 200, 200);
+}
+.note .post .book-menu .menu-item a:hover {
+	background-color: rgb(238, 238, 238);
+}
+body.reader-night-mode .note .post .book-menu .menu-item a:hover {
+	background-color: rgb(90, 90, 90);
+}
+.note .post .show-foot {
+	margin-bottom: 30px;
+}
+.note .post .show-foot .notebook {
+	color: rgb(200, 200, 200); font-size: 12px;
+}
+.note .post .show-foot .notebook i {
+	font-size: 15px; margin-right: 2px;
+}
+.note .post .show-foot .copyright {
+	color: rgb(200, 200, 200); line-height: 1.7; font-size: 12px; margin-top: 5px; float: right;
+}
+.note .post .show-foot .modal-wrap {
+	line-height: 1.7; font-size: 12px; margin-top: 5px; margin-right: 20px; float: right;
+}
+.note .post .show-foot .modal-wrap > a {
+	color: rgb(200, 200, 200);
+}
+.note .post #note-book-info {
+	padding: 20px; border-radius: 4px; border: 1px solid rgb(225, 225, 225); border-image: none; height: 147px; font-size: 12px; position: relative; background-color: hsla(0, 0%, 71%, 0.1);
+}
+body.reader-night-mode .note .post #note-book-info {
+	border-color: rgb(47, 47, 47);
+}
+.note .post #note-book-info .btn {
+	top: 20px; right: 20px; position: absolute;
+}
+.note .post #note-book-info .banner {
+	border-radius: 4px; left: 20px; top: 20px; width: 80px; height: 107px; overflow: hidden; position: absolute; z-index: 1;
+}
+.note .post #note-book-info .banner img {
+	width: 100%; height: 100%;
+}
+.note .post #note-book-info .info {
+	width: 100%; height: 100%; padding-left: 100px; box-sizing: border-box;
+}
+.note .post #note-book-info .info .title {
+	margin: 3px 0px 5px; color: rgb(51, 51, 51); line-height: 1.8; font-size: 17px; display: block;
+}
+body.reader-night-mode .note .post #note-book-info .info .title {
+	color: rgb(200, 200, 200);
+}
+.note .post #note-book-info .info .meta {
+	color: rgb(150, 150, 150); font-size: 12px; margin-bottom: 10px;
+}
+.note .post #note-book-info .info .summary {
+	color: rgb(150, 150, 150); overflow: hidden; -ms-text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+}
+.note .post .follow-detail {
+	padding: 20px; border-radius: 4px; border: 1px solid rgb(225, 225, 225); border-image: none; font-size: 12px; background-color: hsla(0, 0%, 71%, 0.1);
+}
+.note .post .follow-detail li {
+	line-height: 20px;
+}
+.note .post .follow-detail .avatar {
+	width: 48px; height: 48px; margin-right: 10px; float: left;
+}
+.note .post .follow-detail .info {
+	min-height: 47px;
+}
+.note .post .follow-detail .info img.badge-icon {
+	width: 20px; height: 20px; margin-right: 3px; vertical-align: middle;
+}
+.note .post .follow-detail .info .title {
+	line-height: 1.8; font-size: 17px; margin-right: 3px; vertical-align: middle;
+}
+.note .post .follow-detail .ic-man {
+	font-size: 15px; vertical-align: middle;
+}
+.note .post .follow-detail .ic-woman {
+	font-size: 15px; vertical-align: middle;
+}
+.note .post .follow-detail .tag {
+	padding: 1px 2px; border-radius: 3px; border: 1px solid rgb(234, 111, 90); border-image: none; color: rgb(234, 111, 90); font-size: 12px;
+}
+.note .post .follow-detail .info p {
+	color: rgb(150, 150, 150); margin-bottom: 0px;
+}
+.note .post .follow-detail .btn {
+	padding: 8px 0px; width: 100px; font-size: 16px; margin-top: 4px; float: right;
+}
+.note .post .follow-detail .user-follow-button-footer {
+	padding: 8px 0px; width: 100px; font-size: 16px; margin-top: 4px; float: right;
+}
+.note .post .follow-detail .signature {
+	color: rgb(150, 150, 150); overflow: hidden; padding-top: 20px; margin-top: 20px; border-top-color: rgb(225, 225, 225); border-top-width: 1px; border-top-style: solid; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.note .post .dividing-line {
+	border-bottom-color: rgb(240, 240, 240); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.note .post .support-author {
+	padding: 20px 0px; text-align: center; clear: both; min-height: 144px;
+}
+.note .post .support-author p {
+	padding: 0px 30px; color: rgb(150, 150, 150); font-size: 17px; font-weight: 700; margin-bottom: 20px; min-height: 24px;
+}
+.note .post .support-author .btn-pay {
+	padding: 8px 25px; border-radius: 20px; color: rgb(255, 255, 255); font-size: 16px; margin-bottom: 20px; background-color: rgb(234, 111, 90);
+}
+.note .post .support-author .btn-pay:hover {
+	background-color: rgb(236, 97, 73);
+}
+.note .post .support-author .supporter {
+	height: 50px;
+}
+.note .post .support-author .supporter .support-list {
+	list-style: none; display: inline-block;
+}
+.note .post .support-author .supporter .support-list li {
+	margin: 0px -5px; display: inline-block;
+}
+.note .post .support-author .supporter .support-list .avatar {
+	width: 40px; height: 40px;
+}
+.note .post .support-author .supporter .support-list .avatar img {
+	border: 3px solid rgb(255, 255, 255); border-image: none;
+}
+.note .post .support-author .supporter .modal-wrap {
+	color: rgb(100, 100, 100); font-size: 14px; margin-left: 5px; vertical-align: -2px; display: inline-block; cursor: pointer;
+}
+.note .post .support-author .supporter span {
+	padding-left: 5px; font-size: 13px; margin-right: -10px; cursor: pointer;
+}
+.note .post .meta-bottom {
+	margin-top: 40px; margin-bottom: 80px;
+}
+.note .post .meta-bottom .like {
+	display: inline-block;
+}
+.note .post .meta-bottom .like-group {
+	padding: 13px 0px 15px; border-radius: 40px; border: 1px solid rgb(234, 111, 90); border-image: none; font-size: 0px;
+}
+.note .post .meta-bottom .like-group:hover {
+	background-color: rgba(236, 97, 73, 0.05);
+}
+.note .post .meta-bottom .like-group .btn-like {
+	font-size: 19px; display: inline-block;
+}
+.note .post .meta-bottom .like-group .btn-like a {
+	padding: 18px 15px 18px 30px; color: rgb(234, 111, 90);
+}
+.note .post .meta-bottom .like-group .btn-like i {
+	font-size: 21px; margin-right: 5px;
+}
+.note .post .meta-bottom .like-group .modal-wrap {
+	font-size: 18px; border-left-color: rgba(236, 97, 73, 0.4); border-left-width: 1px; border-left-style: solid; display: inline-block;
+}
+.note .post .meta-bottom .like-group .modal-wrap a {
+	padding: 18px 30px 18px 17px; color: rgb(234, 111, 90);
+}
+.note .post .meta-bottom .like-group.active {
+	background-color: rgb(234, 111, 90);
+}
+.note .post .meta-bottom .like-group.active .btn-like > a {
+	color: rgb(255, 255, 255);
+}
+.note .post .meta-bottom .like-group.active .modal-wrap {
+	border-left-color: rgb(255, 255, 255); border-left-width: 1px; border-left-style: solid;
+}
+.note .post .meta-bottom .like-group.active .modal-wrap > a {
+	color: rgb(255, 255, 255);
+}
+.note .post .meta-bottom .share-group {
+	margin-top: 6px; float: right;
+}
+.note .post .meta-bottom .share-group .share-circle {
+	border-radius: 50%; border: 1px solid rgb(220, 220, 220); border-image: none; width: 50px; height: 50px; text-align: center; margin-left: 5px; vertical-align: middle; display: inline-block;
+}
+.note .post .meta-bottom .share-group .share-circle i {
+	line-height: 2; font-size: 24px; margin-top: 10px;
+}
+.note .post .meta-bottom .share-group .share-circle .ic-wechat {
+	color: rgb(0, 187, 41);
+}
+.note .post .meta-bottom .share-group .share-circle .ic-weibo {
+	color: rgb(224, 82, 68);
+}
+.note .post .meta-bottom .share-group .share-circle .ic-picture {
+	color: rgb(155, 155, 155);
+}
+.note .post .meta-bottom .share-group .share-circle:hover {
+	background-color: hsla(0, 0%, 71%, 0.1);
+}
+.note .post .meta-bottom .share-group .more-share {
+	padding: 4px 18px; border-radius: 50px; width: auto; color: rgb(155, 155, 155); line-height: 40px; font-size: 14px;
+}
+.note .post .meta-bottom .share-group .popover-content {
+	padding: 0px;
+}
+.note .post .meta-bottom .share-group .share-list {
+	list-style: none; margin: 0px;
+}
+.note .post .meta-bottom .share-group .share-list li {
+	line-height: 20px;
+}
+.note .post .meta-bottom .share-group .share-list a {
+	padding: 5px 10px; display: block;
+}
+.note .post .meta-bottom .share-group .share-list a:hover {
+	background-color: rgb(240, 240, 240);
+}
+.note .post .meta-bottom .share-group .share-list i {
+	margin-right: 10px;
+}
+.note .post .meta-bottom .share-group .share-list span {
+	vertical-align: middle;
+}
+.note .post #web-note-ad-1 {
+	width: 100%; display: block;
+}
+.note .post #web-note-ad-1 img {
+	width: 100%;
+}
+.note .post .comment-list {
+	padding-top: 20px;
+}
+.note .post .comment-list .new-comment {
+	margin-left: 48px; position: relative;
+}
+.note .post .comment-list .new-comment .avatar {
+	left: -48px; position: absolute;
+}
+.note .post .comment-list .new-comment .sign-container {
+	padding: 10px 15px; border-radius: 4px; border: 1px solid rgb(220, 220, 220); border-image: none; width: 100%; height: 80px; font-size: 13px; vertical-align: top; display: inline-block; outline-style: none; background-color: hsla(0, 0%, 71%, 0.1); resize: none;
+}
+.note .post .comment-list .new-comment textarea {
+	padding: 10px 15px; border-radius: 4px; border: 1px solid rgb(220, 220, 220); border-image: none; width: 100%; height: 80px; font-size: 13px; vertical-align: top; display: inline-block; outline-style: none; background-color: hsla(0, 0%, 71%, 0.1); resize: none;
+}
+.note .post .comment-list .new-comment .sign-container {
+	text-align: center;
+}
+.note .post .comment-list .new-comment .btn-sign {
+	margin: 11px 10px 0px 0px; padding: 7px 18px; border-radius: 20px; border: currentColor; border-image: none; width: 78px; color: rgb(255, 255, 255) !important; font-size: 16px; background-color: rgb(49, 148, 208);
+}
+.note .post .comment-list .new-comment .btn-sign:hover {
+	background-color: rgb(24, 124, 183);
+}
+.note .post .comment-list .new-comment .write-function-block {
+	height: 50px;
+}
+.note .post .comment-list .new-comment .write-function-block .emoji-modal {
+	left: -48px;
+}
+.note .post .comment-list .new-comment .emoji {
+	margin-top: 14px; float: left;
+}
+.note .post .comment-list .new-comment .emoji i {
+	color: rgb(150, 150, 150); font-size: 20px;
+}
+.note .post .comment-list .new-comment .emoji i:hover {
+	color: rgb(47, 47, 47);
+}
+.note .post .comment-list .new-comment .emoji-modal::after {
+	left: 48px;
+}
+.note .post .comment-list .new-comment .emoji-modal::before {
+	left: 48px;
+}
+.note .post .comment-list .new-comment .hint {
+	margin: 20px 0px 0px 20px; color: rgb(150, 150, 150); font-size: 13px; float: left;
+}
+.note .post .comment-list .new-comment .btn-send {
+	margin: 10px 0px; padding: 8px 18px; border-radius: 20px; border: currentColor; border-image: none; width: 78px; color: rgb(255, 255, 255) !important; font-size: 16px; float: right; display: block; cursor: pointer; background-color: rgb(66, 192, 46);
+}
+.note .post .comment-list .new-comment .btn-send:hover {
+	background-color: rgb(61, 185, 34);
+}
+.note .post .comment-list .new-comment .cancel {
+	margin: 18px 30px 0px 0px; color: rgb(150, 150, 150); font-size: 16px; float: right;
+}
+.note .post .comment-list .new-comment .cancel:hover {
+	color: rgb(47, 47, 47);
+}
+.note .post .comment-list .new-comment span {
+	font-size: 14px; vertical-align: -7px;
+}
+.note .post .comment-list .top-title {
+	padding-bottom: 20px; font-size: 17px; font-weight: 700; border-bottom-color: rgb(240, 240, 240); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.note .post .comment-list .top-title span {
+	vertical-align: middle;
+}
+.note .post .comment-list .comment {
+	padding: 20px 0px 30px; border-bottom-color: rgb(240, 240, 240); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.note .post .comment-list :last-child.comment {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.note .post .comment-list .comment p {
+	font-size: 16px;
+}
+.note .post .comment-list .author {
+	margin-bottom: 15px;
+}
+.note .post .comment-list .avatar {
+	width: 38px; height: 38px; margin-right: 5px; vertical-align: middle; display: inline-block;
+}
+.note .post .comment-list .comment-wrap .comment-delete {
+	margin: 12px 0px 0px 10px; float: right; display: none;
+}
+.note .post .comment-list .comment-wrap .report {
+	margin: 12px 0px 0px 10px; float: right; display: none;
+}
+.note .post .comment-list .comment-wrap:hover .comment-delete {
+	display: inherit;
+}
+.note .post .comment-list .comment-wrap:hover .report {
+	display: inherit;
+}
+.note .post .comment-list p {
+	margin: 10px 0px; line-height: 1.5; font-size: 16px; -ms-word-break: break-all;
+}
+.note .post .comment-list p a {
+	color: rgb(49, 148, 208);
+}
+.note .post .comment-list p a:hover {
+	color: rgb(49, 148, 208);
+}
+.note .post .comment-list .info {
+	vertical-align: middle; display: inline-block;
+}
+.note .post .comment-list .name {
+	color: rgb(51, 51, 51); font-size: 15px;
+}
+.note .post .comment-list .name:hover {
+	color: rgb(47, 47, 47);
+}
+.note .post .comment-list .badge-icon {
+	width: 17px; height: 17px;
+}
+.note .post .comment-list .author-tag {
+	padding: 0px 2px; border-radius: 3px; border: 1px solid rgb(234, 111, 90); border-image: none; color: rgb(234, 111, 90); font-size: 12px; margin-left: 2px; vertical-align: middle;
+}
+.note .post .comment-list .meta {
+	color: rgb(150, 150, 150); font-size: 12px;
+}
+.note .post .comment-list .meta span {
+	margin-right: 6px;
+}
+.note .post .comment-list .tool-group a {
+	color: rgb(150, 150, 150); font-size: 0px; margin-right: 10px; display: inline-block;
+}
+.note .post .comment-list .tool-group a:hover {
+	color: rgb(51, 51, 51);
+}
+body.reader-night-mode .note .post .comment-list .tool-group a:hover {
+	color: rgb(200, 200, 200);
+}
+.note .post .comment-list .tool-group a i {
+	font-size: 18px; margin-right: 5px; vertical-align: middle;
+}
+.note .post .comment-list .tool-group a span {
+	font-size: 14px; vertical-align: middle;
+}
+.note .post .comment-list .normal-comment-list {
+	margin-top: 30px;
+}
+.note .post .comment-list .normal-comment-list .top-title .author-only {
+	padding: 4px 8px; border-radius: 12px; border: 1px solid rgb(225, 225, 225); border-image: none; color: rgb(150, 150, 150); font-size: 12px; margin-left: 10px;
+}
+.note .post .comment-list .normal-comment-list .top-title .author-only.active {
+	border: 1px solid rgb(234, 111, 90); border-image: none; color: rgb(255, 255, 255); background-color: rgb(234, 111, 90);
+}
+.note .post .comment-list .normal-comment-list .top-title .close-btn {
+	color: rgb(150, 150, 150); font-size: 12px; margin-left: 10px;
+}
+.note .post .comment-list .normal-comment-list .top-title .pull-right a {
+	color: rgb(150, 150, 150); font-size: 12px; font-weight: 400; margin-left: 10px; display: inline-block;
+}
+.note .post .comment-list .normal-comment-list .top-title .pull-right .active {
+	color: rgb(47, 47, 47);
+}
+.note .post .comment-list .normal-comment-list .top-title .pull-right a:hover {
+	color: rgb(47, 47, 47);
+}
+.note .post .comment-list .normal-comment-list .close-comment {
+	background: url("//cdn2.jianshu.io/assets/web/icon_comment_no-1b12627d360515e52c3c4dfc2f6b0eb7.png") no-repeat 0% 0% / contain; margin: 30px auto 20px; width: 226px; height: 92px;
+}
+.note .post .comment-list .normal-comment-list .no-author-comment {
+	background: url("//cdn2.jianshu.io/assets/web/icon_comment_no-1b12627d360515e52c3c4dfc2f6b0eb7.png") no-repeat 0% 0% / contain; margin: 30px auto 20px; width: 226px; height: 92px;
+}
+.note .post .comment-list .normal-comment-list .no-comment {
+	background: url("//cdn2.jianshu.io/assets/web/icon_comment_no-1b12627d360515e52c3c4dfc2f6b0eb7.png") no-repeat 0% 0% / contain; margin: 30px auto 20px; width: 226px; height: 92px;
+}
+.note .post .comment-list .normal-comment-list .close-comment {
+	background: url("//cdn2.jianshu.io/assets/web/icon_comment_close-1977c458f0eb7900b53b422cac10c713.png") no-repeat 0% 0% / contain;
+}
+.note .post .comment-list .normal-comment-list .no-author-comment {
+	background: url("//cdn2.jianshu.io/assets/web/icon_comment_no_writer-511f994389aa2409f189d680b13ff5ed.png") no-repeat 0% 0% / contain;
+}
+.note .post .comment-list .normal-comment-list .text {
+	text-align: center; color: rgb(150, 150, 150); font-size: 12px; margin-bottom: 50px;
+}
+.note .post .comment-list .normal-comment-list .text a {
+	color: rgb(49, 148, 208);
+}
+.note .post .comment-list .normal-comment-list .text a:hover {
+	color: rgb(49, 148, 208);
+}
+.note .post .comment-list .normal-comment-list .open-block {
+	padding: 30px 0px 50px; text-align: center; border-top-color: rgb(240, 240, 240); border-top-width: 1px; border-top-style: solid;
+}
+.note .post .comment-list .normal-comment-list .open-block .open-btn {
+	padding: 10px 20px; border-radius: 20px; border: 1px solid rgb(220, 220, 220); border-image: none; color: rgb(150, 150, 150); font-size: 16px;
+}
+.note .post .comment-list .sub-comment-list {
+	padding: 5px 0px 5px 20px; margin-top: 20px; border-left-color: rgb(217, 217, 217); border-left-width: 2px; border-left-style: solid;
+}
+.note .post .comment-list .sub-comment-list p {
+	margin: 0px 0px 5px; line-height: 1.5; font-size: 14px;
+}
+.note .post .comment-list .sub-comment-list a {
+	color: rgb(49, 148, 208);
+}
+.note .post .comment-list .sub-comment-list a:hover {
+	color: rgb(49, 148, 208);
+}
+.note .post .comment-list .sub-comment-list .new-comment {
+	margin: 0px;
+}
+.note .post .comment-list .sub-comment-list .new-comment .sign-container {
+	width: 100%;
+}
+.note .post .comment-list .sub-comment-list .new-comment textarea {
+	width: 100%;
+}
+.note .post .comment-list .sub-comment-list .new-comment .emoji {
+	margin: 15px 0px 0px;
+}
+.note .post .comment-list .sub-comment-list .emoji-modal-wrap .emoji-modal {
+	left: -48px;
+}
+.note .post .comment-list .sub-comment {
+	padding-bottom: 15px; margin-bottom: 15px; border-bottom-color: rgb(240, 240, 240); border-bottom-width: 1px; border-bottom-style: dashed;
+}
+.note .post .comment-list :last-child.sub-comment {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+.note .post .comment-list .sub-comment .report {
+	margin: 1px 0px 0px 10px; float: right; display: none;
+}
+.note .post .comment-list .sub-comment .subcomment-delete {
+	margin: 1px 0px 0px 10px; float: right; display: none;
+}
+.note .post .comment-list .sub-comment:hover .report {
+	display: inherit;
+}
+.note .post .comment-list .sub-comment:hover .subcomment-delete {
+	display: inherit;
+}
+.note .post .comment-list .sub-tool-group {
+	color: rgb(150, 150, 150); font-size: 12px;
+}
+.note .post .comment-list .sub-tool-group a {
+	color: rgb(150, 150, 150); margin-left: 10px;
+}
+.note .post .comment-list .sub-tool-group a:hover {
+	color: rgb(51, 51, 51);
+}
+.note .post .comment-list .sub-tool-group a i {
+	font-size: 14px; margin-right: 5px; vertical-align: middle;
+}
+.note .post .comment-list .sub-tool-group a span {
+	vertical-align: middle;
+}
+.note .post .comment-list .more-comment {
+	border: currentColor; border-image: none; color: rgb(150, 150, 150); font-size: 14px;
+}
+.note .post .comment-list .sub-comment-list .add-comment-btn {
+	color: rgb(150, 150, 150);
+}
+.note .post .comment-list .sub-comment-list .add-comment-btn:hover {
+	color: rgb(51, 51, 51);
+}
+.note .post .comment-list .sub-comment-list .add-comment-btn i {
+	margin-right: 5px;
+}
+.note .post .comment-list .line-warp {
+	padding-left: 10px; margin-left: 10px; border-left-color: rgb(217, 217, 217); border-left-width: 1px; border-left-style: solid;
+}
+.like-user {
+	text-align: left;
+}
+.like-user .modal-dialog {
+	width: 620px;
+}
+.like-user .modal-body {
+	height: 500px;
+}
+.like-user .modal-body ul {
+	list-style: none; margin: 0px;
+}
+.like-user .modal-body li {
+	padding: 15px; border-bottom-color: rgb(240, 240, 240); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.like-user .modal-body .avatar {
+	width: 32px; height: 32px; margin-right: 5px; vertical-align: middle; display: inline-block;
+}
+.like-user .modal-body .name {
+	color: rgb(51, 51, 51); font-size: 15px; vertical-align: middle; display: inline-block;
+}
+.like-user .modal-body .name:hover {
+	color: rgb(47, 47, 47);
+}
+.like-user .modal-body .time {
+	color: rgb(150, 150, 150); font-size: 12px; margin-top: 7px; float: right;
+}
+.like-user .modal-footer {
+	display: none;
+}
+.reward-users-modal .v-modal {
+	width: 620px; height: 567px;
+}
+.reward-users-modal .v-modal main {
+	padding: 0px;
+}
+.reward-users-modal .v-modal ul {
+	list-style-type: none;
+}
+.reward-users-modal .v-modal li {
+	padding: 15px; text-align: left; border-bottom-color: rgb(240, 240, 240); border-bottom-width: 1px; border-bottom-style: solid;
+}
+body.reader-night-mode .reward-users-modal .v-modal li {
+	border-color: rgb(47, 47, 47);
+}
+.reward-users-modal .v-modal li .avatar {
+	width: 32px; height: 32px; margin-right: 5px; vertical-align: middle; display: inline-block;
+}
+.reward-users-modal .v-modal li .name {
+	color: rgb(51, 51, 51); font-size: 15px; vertical-align: middle; display: inline-block;
+}
+body.reader-night-mode .reward-users-modal .v-modal li .name {
+	color: rgb(200, 200, 200);
+}
+.reward-users-modal .v-modal li .time {
+	color: rgb(150, 150, 150); font-size: 12px; margin-top: 7px; float: right;
+}
+.add-self .modal-dialog {
+	width: 620px;
+}
+.requests .modal-dialog {
+	width: 620px;
+}
+.add-self .modal-body {
+	height: 500px;
+}
+.requests .modal-body {
+	height: 500px;
+}
+.add-self .modal-body ul {
+	list-style: none; margin: 0px;
+}
+.requests .modal-body ul {
+	list-style: none; margin: 0px;
+}
+.add-self .modal-body ul .default {
+	text-align: center; color: rgb(153, 153, 153); padding-top: 200px; font-size: 15px;
+}
+.requests .modal-body ul .default {
+	text-align: center; color: rgb(153, 153, 153); padding-top: 200px; font-size: 15px;
+}
+.add-self .modal-body ul .default a {
+	color: rgb(49, 148, 208);
+}
+.requests .modal-body ul .default a {
+	color: rgb(49, 148, 208);
+}
+.add-self .modal-body li {
+	padding: 20px; line-height: normal; border-bottom-color: rgb(240, 240, 240); border-bottom-width: 1px; border-bottom-style: solid; position: relative;
+}
+.requests .modal-body li {
+	padding: 20px; line-height: normal; border-bottom-color: rgb(240, 240, 240); border-bottom-width: 1px; border-bottom-style: solid; position: relative;
+}
+.add-self .modal-body .avatar-collection {
+	margin-right: 5px; vertical-align: middle; display: inline-block;
+}
+.requests .modal-body .avatar-collection {
+	margin-right: 5px; vertical-align: middle; display: inline-block;
+}
+.add-self .modal-body .collection-info {
+	vertical-align: middle; display: inline-block;
+}
+.requests .modal-body .collection-info {
+	vertical-align: middle; display: inline-block;
+}
+.add-self .modal-body .collection-name {
+	color: rgb(51, 51, 51); font-size: 15px; font-weight: 700; display: block;
+}
+.requests .modal-body .collection-name {
+	color: rgb(51, 51, 51); font-size: 15px; font-weight: 700; display: block;
+}
+.add-self .modal-body .collection-name:hover {
+	color: rgb(47, 47, 47);
+}
+.requests .modal-body .collection-name:hover {
+	color: rgb(47, 47, 47);
+}
+.add-self .modal-body .meta {
+	color: rgb(150, 150, 150); font-size: 12px; display: inline-block;
+}
+.requests .modal-body .meta {
+	color: rgb(150, 150, 150); font-size: 12px; display: inline-block;
+}
+.add-self .modal-body .author-name {
+	color: rgb(49, 148, 208);
+}
+.add-self .modal-body .author-name:hover {
+	color: rgb(49, 148, 208);
+}
+.requests .modal-body .author-name {
+	color: rgb(49, 148, 208);
+}
+.requests .modal-body .author-name:hover {
+	color: rgb(49, 148, 208);
+}
+.add-self .modal-body .follow {
+	padding: 5px 20px; width: 100px; font-size: 15px; margin-top: 12.5px; float: right;
+}
+.add-self .modal-body .follow-cancel {
+	padding: 5px 20px; width: 100px; font-size: 15px; margin-top: 12.5px; float: right;
+}
+.add-self .modal-body .follow-each {
+	padding: 5px 20px; width: 100px; font-size: 15px; margin-top: 12.5px; float: right;
+}
+.add-self .modal-body .following {
+	padding: 5px 20px; width: 100px; font-size: 15px; margin-top: 12.5px; float: right;
+}
+.requests .modal-body .follow {
+	padding: 5px 20px; width: 100px; font-size: 15px; margin-top: 12.5px; float: right;
+}
+.requests .modal-body .follow-cancel {
+	padding: 5px 20px; width: 100px; font-size: 15px; margin-top: 12.5px; float: right;
+}
+.requests .modal-body .follow-each {
+	padding: 5px 20px; width: 100px; font-size: 15px; margin-top: 12.5px; float: right;
+}
+.requests .modal-body .following {
+	padding: 5px 20px; width: 100px; font-size: 15px; margin-top: 12.5px; float: right;
+}
+.add-self .modal-body .search {
+	padding: 20px 22px 0px;
+}
+.requests .modal-body .search {
+	padding: 20px 22px 0px;
+}
+.add-self .modal-body .search input {
+	padding: 7px 18px; border-radius: 40px; border: currentColor; border-image: none; width: 100%; font-size: 15px; background-color: hsla(0, 0%, 71%, 0.25);
+}
+.requests .modal-body .search input {
+	padding: 7px 18px; border-radius: 40px; border: currentColor; border-image: none; width: 100%; font-size: 15px; background-color: hsla(0, 0%, 71%, 0.25);
+}
+.add-self .modal-body .search a {
+	top: 25px; right: 37px; color: rgb(150, 150, 150); position: absolute;
+}
+.requests .modal-body .search a {
+	top: 25px; right: 37px; color: rgb(150, 150, 150); position: absolute;
+}
+.add-self .modal-body .status {
+	font-size: 12px; vertical-align: middle;
+}
+.requests .modal-body .status {
+	font-size: 12px; vertical-align: middle;
+}
+.add-self .modal-body span.has-add {
+	color: rgb(66, 192, 46);
+}
+.requests .modal-body span.has-add {
+	color: rgb(66, 192, 46);
+}
+.add-self .modal-body .action-btn {
+	padding: 2px 8px; border-radius: 12px; top: 50%; right: 20px; line-height: normal; font-size: 13px; margin-top: -12px; position: absolute;
+}
+.requests .modal-body .action-btn {
+	padding: 2px 8px; border-radius: 12px; top: 50%; right: 20px; line-height: normal; font-size: 13px; margin-top: -12px; position: absolute;
+}
+.add-self .modal-body .push {
+	border: 1px solid rgb(66, 192, 46); border-image: none; color: rgb(66, 192, 46);
+}
+.add-self .modal-body .repush {
+	border: 1px solid rgb(66, 192, 46); border-image: none; color: rgb(66, 192, 46);
+}
+.requests .modal-body .push {
+	border: 1px solid rgb(66, 192, 46); border-image: none; color: rgb(66, 192, 46);
+}
+.requests .modal-body .repush {
+	border: 1px solid rgb(66, 192, 46); border-image: none; color: rgb(66, 192, 46);
+}
+.add-self .modal-body .push:hover {
+	background-color: rgba(66, 192, 46, 0.05);
+}
+.add-self .modal-body .repush:hover {
+	background-color: rgba(66, 192, 46, 0.05);
+}
+.requests .modal-body .push:hover {
+	background-color: rgba(66, 192, 46, 0.05);
+}
+.requests .modal-body .repush:hover {
+	background-color: rgba(66, 192, 46, 0.05);
+}
+.add-self .modal-body .revoke {
+	border: 1px solid rgb(150, 150, 150); border-image: none; color: rgb(150, 150, 150);
+}
+.requests .modal-body .revoke {
+	border: 1px solid rgb(150, 150, 150); border-image: none; color: rgb(150, 150, 150);
+}
+.add-self .modal-body .revoke:hover {
+	background-color: hsla(0, 0%, 71%, 0.05);
+}
+.requests .modal-body .revoke:hover {
+	background-color: hsla(0, 0%, 71%, 0.05);
+}
+.add-self .modal-body .remove {
+	border: 1px solid rgb(234, 111, 90); border-image: none; color: rgb(234, 111, 90);
+}
+.requests .modal-body .remove {
+	border: 1px solid rgb(234, 111, 90); border-image: none; color: rgb(234, 111, 90);
+}
+.add-self .modal-body .remove:hover {
+	background-color: rgba(236, 97, 73, 0.05);
+}
+.requests .modal-body .remove:hover {
+	background-color: rgba(236, 97, 73, 0.05);
+}
+.add-self .modal-footer {
+	display: none;
+}
+.requests .modal-footer {
+	display: none;
+}
+.add-self .load-more {
+	width: 200px; margin-bottom: 30px;
+}
+.requests .load-more {
+	width: 200px; margin-bottom: 30px;
+}
+.add-self .new-collection-btn {
+	padding-left: 10px; font-size: 13px; font-weight: 400; vertical-align: middle;
+}
+.requests .new-collection-btn {
+	padding-left: 10px; font-size: 13px; font-weight: 400; vertical-align: middle;
+}
+.add-self .new-collection-btn a {
+	color: rgb(66, 192, 46);
+}
+.requests .new-collection-btn a {
+	color: rgb(66, 192, 46);
+}
+.requests .modal-header .modal-title {
+	display: inline-block;
+}
+.requests .modal-header .search {
+	top: 15px; right: 80px; position: absolute;
+}
+.requests .modal-header .search input {
+	padding: 7px 18px; border-radius: 40px; border: currentColor; border-image: none; width: 240px; font-size: 15px; display: inline-block; background-color: hsla(0, 0%, 71%, 0.25);
+}
+.requests .modal-header .search a {
+	top: 6px; right: 12px; color: rgb(150, 150, 150); position: absolute;
+}
+.requests .modal-dialog {
+	width: 960px;
+}
+.requests .modal-body {
+	padding-bottom: 30px;
+}
+.requests .modal-body li {
+	padding: 25px 20px; width: 33.33%; border-right-color: rgb(240, 240, 240); border-right-width: 1px; border-right-style: solid; display: inline-block;
+}
+.requests .modal-body .collection-info {
+	top: 50%; width: 250px; margin-left: 5px; position: absolute; transform: translateY(-50%); -webkit-transform: translateY(-50%);
+}
+.requests .modal-body .collection-info .collection-name {
+	max-width: 180px;
+}
+.requests .modal-body .avatar-collection {
+	width: 40px; height: 40px;
+}
+.requests .modal-body .meta {
+	padding-top: 2px; display: block;
+}
+.requests .new-collection-btn {
+	color: rgb(66, 192, 46); padding-left: 10px; font-size: 13px;
+}
+.requests .create-collection-btn {
+	padding: 20px; font-size: 15px;
+}
+.requests .create-collection-btn a {
+	color: rgb(66, 192, 46);
+}
+.requests .create-collection-btn i {
+	padding-right: 3px;
+}
+.requests .title {
+	padding: 20px 0px 10px 20px; color: rgb(51, 51, 51); font-size: 15px; border-bottom-color: rgb(240, 240, 240); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(244, 244, 244);
+}
+.requests .show-more {
+	padding: 10px 0px; text-align: center; font-size: 13px;
+}
+.requests .show-more a {
+	color: rgb(150, 150, 150);
+}
+.requests .show-more i {
+	padding-left: 5px; margin-right: -15px;
+}
+.modal-requests-placeholder {
+	width: 33.33%; padding-bottom: 20px; margin-right: -5px; display: inline-block;
+}
+.modal-requests-placeholder .avatar {
+	margin: 20px 0px 0px 20px; border-radius: 5px; width: 40px; height: 40px; position: absolute; cursor: default !important; background-color: rgb(234, 234, 234);
+}
+.modal-requests-placeholder .wrap {
+	padding: 24px 20px 20px 70px !important; border-right-color: rgb(240, 240, 240); border-bottom-color: rgb(240, 240, 240); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid;
+}
+.modal-requests-placeholder .wrap .btn {
+	border-radius: 4px; width: 38px; height: 24px; margin-top: 5px; float: right; cursor: default !important; background-color: rgb(234, 234, 234);
+}
+.modal-requests-placeholder .wrap .name {
+	width: 30px; height: 15px; position: inherit !important; background-color: rgb(234, 234, 234);
+}
+.modal-requests-placeholder .wrap .text {
+	margin: 7px 0px; animation:shortLoading 1s ease-in-out -0.5s infinite; width: 40%; height: 12px; background-color: rgb(234, 234, 234); -webkit-animation: shortLoading 1s ease-in-out -.5s infinite; -moz-animation: shortLoading 1s ease-in-out -.5s infinite; -o-animation: shortLoading 1s ease-in-out -.5s infinite;
+}
+.note-bottom {
+	padding-top: 40px; padding-bottom: 40px; min-height: 213px; background-color: rgb(245, 245, 245);
+}
+.note-bottom .seo-recommended-notes {
+	margin: 0px auto 20px; width: 620px;
+}
+.note-bottom .seo-recommended-notes .note {
+	padding: 0px 0px 25px; margin-bottom: 25px; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid; display: block;
+}
+.note-bottom .seo-recommended-notes :last-child.note {
+	border: currentColor; border-image: none; margin-bottom: 0px;
+}
+.note-bottom .seo-recommended-notes .note.have-img {
+	min-height: 136px;
+}
+.note-bottom .seo-recommended-notes .note .cover img {
+	background-position: 50%; margin: -5px 0px 0px 15px; border-radius: 6px; width: 150px; height: 120px; float: right; background-repeat: no-repeat; background-size: cover;
+}
+.note-bottom .seo-recommended-notes .note .title {
+	color: rgb(51, 51, 51); line-height: 27px; overflow: hidden; font-size: 18px; font-weight: 700; margin-bottom: 4px; display: inherit; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.note-bottom .seo-recommended-notes .note .title:hover {
+	text-decoration: underline;
+}
+.note-bottom .seo-recommended-notes .note .title:visited {
+	color: rgb(153, 153, 153);
+}
+.note-bottom .seo-recommended-notes .note .description {
+	color: rgb(51, 51, 51); line-height: 23px; overflow: hidden; font-size: 13px; margin-bottom: 12px; -ms-text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+}
+.note-bottom .seo-recommended-notes .note .author .avatar {
+	background-position: 50%; border-radius: 50%; width: 24px; height: 24px; margin-right: 3px; vertical-align: middle; display: inline-block; background-repeat: no-repeat; background-size: cover;
+}
+.note-bottom .seo-recommended-notes .note .author .name {
+	color: rgb(51, 51, 51); font-size: 13px; vertical-align: middle;
+}
+.note .iradio-square-green {
+	background: url("//cdn2.jianshu.io/assets/radio/radio-0d0c83844389bbb740ce7daedff7ad8f.png") no-repeat 0px 0px; margin: 0px; padding: 0px; border: currentColor; border-image: none; width: 18px; height: 18px; vertical-align: middle; display: inline-block; cursor: pointer;
+}
+.note .iradio-square-green.hover {
+	background-position: -20px 0px;
+}
+.note .iradio-square-green.checked {
+	background-position: -40px 0px;
+}
+.note .iradio-square-green.disabled {
+	background-position: -60px 0px; cursor: default;
+}
+.note .iradio-square-green.checked.disabled {
+	background-position: -80px 0px;
+}
+.note .social-icon-sprite {
+	background: url("//cdn2.jianshu.io/assets/social_icons/social-e899099573ece117d8b1c274fd91563c.png") no-repeat; margin: 0px; padding: 0px; width: 18px; height: 18px; vertical-align: middle; display: inline-block;
+}
+.note .social-icon-weibo {
+	background-position: 0px 0px;
+}
+.note .social-icon-weixin {
+	background-position: -20px 0px;
+}
+.note .social-icon-picture {
+	background-position: -40px 0px;
+}
+.note .social-icon-zone {
+	background-position: -60px 0px;
+}
+.note .social-icon-twitter {
+	background-position: -80px 0px;
+}
+.note .social-icon-facebook {
+	background-position: -100px 0px;
+}
+.note .social-icon-google {
+	background-position: -120px 0px;
+}
+.note .social-icon-douban {
+	background-position: -140px 0px;
+}
+.note .social-icon-weibov {
+	background-position: -160px 0px;
+}
+.note .social-icon-qq {
+	background-position: -180px 0px;
+}
+.note .social-icon-index {
+	background-position: -200px 0px;
+}
+.note .social-icon-knight {
+	background-position: -220px 0px;
+}
+@media not all, not all, all and (min-resolution:120dpi)
+{
+.note .iradio-square-green {
+	background-image: url("//cdn2.jianshu.io/assets/radio/radio@2x-20f910c36563a491780c7cc3ed7e13b3.png"); background-size: 100px 20px;
+}
+.note .social-icon-sprite {
+	background-image: url("//cdn2.jianshu.io/assets/social_icons/social@2x-4aa5a6de79e34c6a44ec157fd0a7b86b.png"); background-size: 240px 20px;
+}
+}
+@media all and (max-width:1080px)
+{
+.requests .modal-dialog {
+	width: 750px;
+}
+.requests .modal-body .collection-info {
+	width: 304px;
+}
+.requests .modal-body .collection-info .collection-name {
+	max-width: 230px;
+}
+.modal-requests-placeholder .wrap {
+	width: 50%;
+}
+.requests .modal-body li {
+	width: 50%;
+}
+}
+.comments-placeholder {
+	padding: 20px 0px 30px;
+}
+.comments-placeholder .author {
+	margin-bottom: 15px;
+}
+.comments-placeholder .author .avatar {
+	border-radius: 50%; width: 38px; height: 38px; margin-right: 5px; cursor: default !important; background-color: rgb(234, 234, 234);
+}
+.comments-placeholder .author .avatar {
+	vertical-align: middle; display: inline-block;
+}
+.comments-placeholder .author .info {
+	vertical-align: middle; display: inline-block;
+}
+.comments-placeholder .author .info .name {
+	width: 60px; height: 15px; margin-bottom: 6px; background-color: rgb(234, 234, 234);
+}
+.comments-placeholder .author .info .meta {
+	width: 120px; height: 12px; background-color: rgb(234, 234, 234);
+}
+.comments-placeholder .text {
+	margin: 0px 0px 8px !important; animation:loading 1s ease-in-out infinite; width: 100%; height: 16px; background-color: rgb(234, 234, 234); -webkit-animation: loading 1s ease-in-out infinite; -moz-animation: loading 1s ease-in-out infinite; -o-animation: loading 1s ease-in-out infinite;
+}
+.comments-placeholder .animation-delay {
+	animation:loading 1s ease-in-out -0.5s infinite; -webkit-animation: loading 1s ease-in-out -.5s infinite; -moz-animation: loading 1s ease-in-out -.5s infinite; -o-animation: loading 1s ease-in-out -.5s infinite;
+}
+.comments-placeholder .tool-group {
+	margin: 0px; color: rgb(234, 234, 234); padding-top: 6px; font-size: 15px;
+}
+.comments-placeholder .tool-group div {
+	vertical-align: middle; display: inline-block; background-color: rgb(234, 234, 234);
+}
+.comments-placeholder .tool-group i {
+	margin-right: 5px; vertical-align: middle;
+}
+.comments-placeholder .tool-group .zan {
+	width: 40px; height: 14px; margin-right: 10px;
+}
+.sub-comments-placeholder {
+	padding-top: 6px;
+}
+.sub-comments-placeholder .text {
+	margin: 0px 0px 8px !important; animation:loading 1s ease-in-out infinite; width: 100%; height: 16px; background-color: rgb(234, 234, 234); -webkit-animation: loading 1s ease-in-out infinite; -moz-animation: loading 1s ease-in-out infinite; -o-animation: loading 1s ease-in-out infinite;
+}
+.sub-comments-placeholder .animation-delay {
+	animation:loading 1s ease-in-out 0.5s infinite; -webkit-animation: loading 1s ease-in-out .5s infinite; -moz-animation: loading 1s ease-in-out .5s infinite; -o-animation: loading 1s ease-in-out .5s infinite;
+}
+.sub-comments-placeholder .tool-group {
+	color: rgb(234, 234, 234); margin-top: -2px;
+}
+.sub-comments-placeholder .tool-group div {
+	vertical-align: middle; display: inline-block; background-color: rgb(234, 234, 234);
+}
+.sub-comments-placeholder .tool-group i {
+	margin: 0px 5px 0px 10px; font-size: 13px; vertical-align: middle;
+}
+.sub-comments-placeholder .tool-group .time {
+	width: 96px; height: 12px;
+}
+.sub-comments-placeholder .tool-group .comment {
+	padding: 0px !important; width: 24px; height: 12px;
+}
+.tooltip-inner {
+	max-width: none;
+}
+.reader-night-mode .note #web-note-ad-fixed {
+	opacity: 0.85;
+}
+.reader-night-mode .note #web-note-ad-fixed .close:hover {
+	color: rgb(200, 200, 200);
+}
+.reader-night-mode .note .post #web-note-ad-1 {
+	opacity: 0.85;
+}
+.hljs {
+	background: rgb(246, 246, 246); color: rgb(101, 123, 131); -webkit-text-size-adjust: none;
+}
+pre {
+	background: rgb(246, 246, 246); color: rgb(101, 123, 131); -webkit-text-size-adjust: none;
+}
+.diff .hljs-header {
+	color: rgb(147, 161, 161);
+}
+.hljs-comment {
+	color: rgb(147, 161, 161);
+}
+.hljs-doctype {
+	color: rgb(147, 161, 161);
+}
+.hljs-pi {
+	color: rgb(147, 161, 161);
+}
+.lisp .hljs-string {
+	color: rgb(147, 161, 161);
+}
+.css .hljs-tag {
+	color: rgb(133, 153, 0);
+}
+.hljs-addition {
+	color: rgb(133, 153, 0);
+}
+.hljs-keyword {
+	color: rgb(133, 153, 0);
+}
+.hljs-request {
+	color: rgb(133, 153, 0);
+}
+.hljs-status {
+	color: rgb(133, 153, 0);
+}
+.hljs-winutils {
+	color: rgb(133, 153, 0);
+}
+.method {
+	color: rgb(133, 153, 0);
+}
+.nginx .hljs-title {
+	color: rgb(133, 153, 0);
+}
+.hljs-command {
+	color: rgb(42, 161, 152);
+}
+.hljs-doctag {
+	color: rgb(42, 161, 152);
+}
+.hljs-hexcolor {
+	color: rgb(42, 161, 152);
+}
+.hljs-link_url {
+	color: rgb(42, 161, 152);
+}
+.hljs-number {
+	color: rgb(42, 161, 152);
+}
+.hljs-regexp {
+	color: rgb(42, 161, 152);
+}
+.hljs-rule .hljs-value {
+	color: rgb(42, 161, 152);
+}
+.hljs-string {
+	color: rgb(42, 161, 152);
+}
+.hljs-tag .hljs-value {
+	color: rgb(42, 161, 152);
+}
+.tex .hljs-formula {
+	color: rgb(42, 161, 152);
+}
+.css .hljs-function {
+	color: rgb(38, 139, 210);
+}
+.hljs-built_in {
+	color: rgb(38, 139, 210);
+}
+.hljs-chunk {
+	color: rgb(38, 139, 210);
+}
+.hljs-decorator {
+	color: rgb(38, 139, 210);
+}
+.hljs-id {
+	color: rgb(38, 139, 210);
+}
+.hljs-identifier {
+	color: rgb(38, 139, 210);
+}
+.hljs-localvars {
+	color: rgb(38, 139, 210);
+}
+.hljs-name {
+	color: rgb(38, 139, 210);
+}
+.hljs-title {
+	color: rgb(38, 139, 210);
+}
+.vhdl .hljs-literal {
+	color: rgb(38, 139, 210);
+}
+.hljs-attribute {
+	color: rgb(181, 137, 0);
+}
+.hljs-class .hljs-title {
+	color: rgb(181, 137, 0);
+}
+.hljs-constant {
+	color: rgb(181, 137, 0);
+}
+.hljs-link_reference {
+	color: rgb(181, 137, 0);
+}
+.hljs-parent {
+	color: rgb(181, 137, 0);
+}
+.hljs-type {
+	color: rgb(181, 137, 0);
+}
+.hljs-variable {
+	color: rgb(181, 137, 0);
+}
+.lisp .hljs-body {
+	color: rgb(181, 137, 0);
+}
+.smalltalk .hljs-number {
+	color: rgb(181, 137, 0);
+}
+.css .hljs-pseudo {
+	color: rgb(203, 75, 22);
+}
+.diff .hljs-change {
+	color: rgb(203, 75, 22);
+}
+.hljs-attr_selector {
+	color: rgb(203, 75, 22);
+}
+.hljs-cdata {
+	color: rgb(203, 75, 22);
+}
+.hljs-header {
+	color: rgb(203, 75, 22);
+}
+.hljs-pragma {
+	color: rgb(203, 75, 22);
+}
+.hljs-preprocessor {
+	color: rgb(203, 75, 22);
+}
+.hljs-preprocessor .hljs-keyword {
+	color: rgb(203, 75, 22);
+}
+.hljs-shebang {
+	color: rgb(203, 75, 22);
+}
+.hljs-special {
+	color: rgb(203, 75, 22);
+}
+.hljs-subst {
+	color: rgb(203, 75, 22);
+}
+.hljs-symbol {
+	color: rgb(203, 75, 22);
+}
+.hljs-symbol .hljs-string {
+	color: rgb(203, 75, 22);
+}
+.hljs-deletion {
+	color: rgb(220, 50, 47);
+}
+.hljs-important {
+	color: rgb(220, 50, 47);
+}
+.hljs-link_label {
+	color: rgb(108, 113, 196);
+}
+.tex .hljs-formula {
+	background: rgb(238, 232, 213);
+}

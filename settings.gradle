@@ -1,1 +1,1 @@
-include ':app', ':mydetailedlist'
+include ':app', ':mydetailedlist', ':testndk', ':multiselection', ':singleselection', ':timeanddatepicker', ':progressbars', ':meituangrid', ':lessionstable', ':neterrorview', ':deliciousfood', ':downloaddata', ':downloadimage', ':pullxmldemo', ':jsondemo', ':androidtojs', ':assetsdemo', ':filedemo', ':shardpreferencedemo', ':sqlitedeom', ':mycontentprovider', 'MultiSelection'

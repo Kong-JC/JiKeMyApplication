@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sqlitedeom.MainActivity">
+
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Database!"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btnAddSql"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add By SQL"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btnDelSql"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Del By SQL"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btnUpdateSql"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update By SQL"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btnQuerySql"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Query By SQL"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btnAddApi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add By Api"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btnDelApi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Del By Api"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btnUpdateApi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update By Api"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btnQueryApi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Query By Api"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btnGoActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go CursorAdapter Activity"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btnTransaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Transaction"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btnGoPagingActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go Paging Activity"
+        android:textAllCaps="false" />
+
+</LinearLayout>

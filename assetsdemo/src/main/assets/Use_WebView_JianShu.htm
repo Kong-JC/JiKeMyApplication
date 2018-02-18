@@ -1,0 +1,982 @@
+﻿<!DOCTYPE HTML>
+<!-- saved from url=(0038)https://www.jianshu.com/p/3c94ae673e2a -->
+<!DOCTYPE html PUBLIC "" ""><!--[if IE 6]><html class="ie lt-ie8"><![endif]--><!--[if IE 7]><html class="ie lt-ie8"><![endif]--><!--[if IE 8]><html class="ie ie8"><![endif]--><!--[if IE 9]><html class="ie ie9"><![endif]--><!--[if !IE]><!--><HTML><!--<![endif]--><HEAD><META 
+content="IE=11.0000" http-equiv="X-UA-Compatible">
+   
+<META charset="utf-8">   
+<META http-equiv="X-UA-Compatible" content="IE=Edge">   
+<META name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"> 
+  <!-- Start of Baidu Transcode -->   
+<META http-equiv="Cache-Control" content="no-siteapp">   
+<META http-equiv="Cache-Control" content="no-transform">   
+<META name="applicable-device" content="pc,mobile">   
+<META name="MobileOptimized" content="width">   
+<META name="HandheldFriendly" content="true">   
+<META name="mobile-agent" content="format=html5;url=https://www.jianshu.com/p/3c94ae673e2a"> 
+  <!-- End of Baidu Transcode -->     
+<META name="description" content="前言 现在很多App里都内置了Web网页（Hybrid App），比如说很多电商平台，淘宝、京东、聚划算等等，如下图京东首页 那么这种该如何实现呢？其实这是Android里一个叫WebView组件实现 今天，我将献上一份全面介绍 WebView的常见用法。 目录 1. 简介 WebView是一个基于webkit引擎、展现web页面的控件。 Android的Webview在低版本和高版本采用了..."> 
+  
+<META name="360-site-verification" content="604a14b53c6b871206001285921e81d8">   
+<META content="294ec9de89e7fadb" property="wb:webmaster">   
+<META content="104102651453316562112116375" property="qc:admins">   
+<META content="11635613706305617" property="qc:admins">   
+<META content="1163561616621163056375" property="qc:admins">   
+<META name="google-site-verification" content="cV4-qkUJZR6gmFeajx_UyPe47GW9vY6cnCrYtCHYNh4"> 
+  
+<META name="google-site-verification" content="HF7lfF8YEGs1qtCE-kPml8Z469e2RHhGajy6JPVy5XI"> 
+  
+<META http-equiv="mobile-agent" content="format=html5; url=https://www.jianshu.com/p/3c94ae673e2a"> 
+  <!-- Apple -->   
+<META name="apple-mobile-web-app-title" content="简书">     <!--  Meta for Smart App Banner --> 
+  
+<META name="apple-itunes-app" content="app-id=888237539, app-argument=jianshu://notes/5509828"> 
+  <!-- End -->   <!--  Meta for Twitter Card -->   
+<META content="summary" property="twitter:card">   
+<META content="@jianshucom" property="twitter:site">   
+<META content="Android：这是一份全面 &amp; 详细的Webview使用攻略" property="twitter:title">   
+<META content="前言 现在很多App里都内置了Web网页（Hybrid App），比如说很多电商平台，淘宝、京东、聚划算等等，如下图京东首页 那么这种该如何实现呢？其实这是Android里一..." 
+property="twitter:description">   
+<META content="https://www.jianshu.com/p/3c94ae673e2a" property="twitter:url">   <!-- End --> 
+  <!--  Meta for OpenGraph -->   
+<META content="865829053512461" property="fb:app_id">   
+<META content="简书" property="og:site_name">   
+<META content="Android：这是一份全面 &amp; 详细的Webview使用攻略" property="og:title">   
+<META content="article" property="og:type">   
+<META content="https://www.jianshu.com/p/3c94ae673e2a" property="og:url">   
+<META content="前言 现在很多App里都内置了Web网页（Hybrid App），比如说很多电商平台，淘宝、京东、聚划算等等，如下图京东首页 那么这种该如何实现呢？其实这是Android里一个叫WebView组..." 
+property="og:description">   <!-- End -->   <!--  Meta for Facebook Applinks --> 
+  
+<META content="jianshu://notes/5509828" property="al:ios:url">   
+<META content="888237539" property="al:ios:app_store_id">   
+<META content="简书" property="al:ios:app_name">   
+<META content="jianshu://notes/5509828" property="al:android:url">   
+<META content="com.jianshu.haruki" property="al:android:package">   
+<META content="简书" property="al:android:app_name">   <!-- End -->     
+<TITLE>Android：这是一份全面 &amp; 详细的Webview使用攻略 - 简书</TITLE>   
+<META name="csrf-param" content="authenticity_token"> 
+<META name="csrf-token" content="p9i3w+Ko8qKf6N81zjJ5xXlFfwh3T3G0KcWPUiW1KorkMQzuN/+dKm3Zysy4faemRrZZB2N1LfpdorSLBd2Yiw=="> 
+  <LINK href="Use_WebView_JianShu_files/web-2b4b94dda52e8beee722.css" rel="stylesheet" 
+media="all">     <LINK href="Use_WebView_JianShu_files/entry-ba0a764c96572c00916e.css" 
+rel="stylesheet" media="all">   <LINK href="//cdn2.jianshu.io/assets/favicons/favicon-e743bfb1821442341c3ab15bdbe804f7ad97676bd07a770ccc9483473aa76f06.ico" 
+rel="shortcut icon" type="image/x-icon">       <LINK href="//cdn2.jianshu.io/assets/apple-touch-icons/57-a6f1f1ee62ace44f6dc2f6a08575abd3c3b163288881c78dd8d75247682a4b27.png" 
+rel="apple-touch-icon-precomposed" sizes="57x57">       <LINK href="//cdn2.jianshu.io/assets/apple-touch-icons/72-fb9834bcfce738fd7b9c5e31363e79443e09a81a8e931170b58bc815387c1562.png" 
+rel="apple-touch-icon-precomposed" sizes="72x72">       <LINK href="//cdn2.jianshu.io/assets/apple-touch-icons/76-49d88e539ff2489475d603994988d871219141ecaa0b1a7a9a1914f4fe3182d6.png" 
+rel="apple-touch-icon-precomposed" sizes="76x76">       <LINK href="//cdn2.jianshu.io/assets/apple-touch-icons/114-24252fe693524ed3a9d0905e49bff3cbd0228f25a320aa09053c2ebb4955de97.png" 
+rel="apple-touch-icon-precomposed" sizes="114x114">       <LINK href="//cdn2.jianshu.io/assets/apple-touch-icons/120-1bb7371f5e87f93ce780a5f1a05ff1b176828ee0d1d130e768575918a2e05834.png" 
+rel="apple-touch-icon-precomposed" sizes="120x120">       <LINK href="//cdn2.jianshu.io/assets/apple-touch-icons/152-bf209460fc1c17bfd3e2b84c8e758bc11ca3e570fd411c3bbd84149b97453b99.png" 
+rel="apple-touch-icon-precomposed" sizes="152x152">   <!-- Start of 访问统计 -->     
+<SCRIPT>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </SCRIPT>
+   <!-- End of 访问统计 --> 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD>   
+<BODY class="reader-black-font" lang="zh-CN"><!-- 全局顶部导航栏 --> <NAV class="navbar navbar-default navbar-fixed-top" 
+role="navigation">
+<DIV class="width-limit"><!-- 左上方 Logo -->     <A class="logo" href="https://www.jianshu.com/"><IMG 
+alt="Nav logo" src="Use_WebView_JianShu_files/nav-logo-4c7bbafe27adc892f3046e6978459bac.png"></A> 
+    <!-- 右上角 -->       <!-- 未登录显示登录/注册/写文章 -->       <A class="btn write-btn" 
+href="https://www.jianshu.com/writer#/" target="_blank"><I class="iconfont ic-write"></I>写文章 
+</A>      <A class="btn sign-up" href="https://www.jianshu.com/sign_up">注册</A>   
+    <A class="btn log-in" href="https://www.jianshu.com/sign_in">登录</A>     <!-- 如果用户登录，显示下拉菜单 --> 
+    
+<DIV id="view-mode-ctrl"></DIV>
+<DIV class="container">
+<DIV class="navbar-header"><BUTTON class="navbar-toggle collapsed" 
+aria-expanded="false" type="button" data-toggle="collapse" 
+data-target="#menu"><SPAN class="icon-bar"></SPAN><SPAN 
+class="icon-bar"></SPAN><SPAN class="icon-bar"></SPAN></BUTTON>       </DIV>
+<DIV class="collapse navbar-collapse" id="menu">
+<UL class="nav navbar-nav">
+  <LI class="tab "><A href="https://www.jianshu.com/"><SPAN 
+  class="menu-text">首页</SPAN><I class="iconfont ic-navigation-discover menu-icon"></I></A></LI>
+  <LI class="tab "><A class="app-download-btn" id="web-nav-app-download-btn" 
+  href="https://www.jianshu.com/apps?utm_medium=desktop&amp;utm_source=navbar-apps"><SPAN 
+  class="menu-text">下载App</SPAN><I class="iconfont ic-navigation-download menu-icon"></I></A></LI>
+  <LI class="search">
+  <FORM action="/search" method="get" target="_blank" 
+accept-charset="UTF-8"><INPUT name="utf8" type="hidden" value="✓">             
+    
+<INPUT name="q" class="search-input" id="q" type="text" placeholder="搜索" value="" autocomplete="off"> 
+                <A class="search-btn" href="javascript:void(null)"><I class="iconfont ic-search"></I></A> 
+  </FORM></LI></UL></DIV></DIV></DIV></NAV>
+<DIV class="note"><A id="web-note-ad-fixed" href="https://www.jianshu.com/apps/download?utm_source=sbc" 
+target="_blank"><SPAN class="close">×</SPAN></A>   
+<DIV class="post">
+<DIV class="article">
+<H1 class="title">Android：这是一份全面 &amp; 详细的Webview使用攻略</H1><!-- 作者区域 -->         
+<DIV class="author"><A class="avatar" href="https://www.jianshu.com/u/383970bef0a0"><IMG 
+alt="96" src="Use_WebView_JianShu_files/e32cb66f99ea.jpg"> </A>          
+<DIV class="info"><SPAN class="name"><A href="https://www.jianshu.com/u/383970bef0a0">Carson_Ho</A></SPAN> 
+              <IMG title="简书程序员优秀作者" class="badge-icon" alt="595a1b60 08f6 4beb 998f 2bf55e230555" 
+src="Use_WebView_JianShu_files/595a1b60-08f6-4beb-998f-2bf55e230555" 
+data-toggle="tooltip">             <!-- 关注用户按钮 -->             
+<DIV data-author-follow-button="" 
+props-data-classes="user-follow-button-header"></DIV><!-- 文章数据信息 -->             
+<DIV class="meta"><!-- 如果文章更新时间大于发布时间，那么使用 tooltip 显示更新时间 -->                 
+<SPAN title="最后编辑于 2018.02.15 15:35" class="publish-time" data-toggle="tooltip" 
+data-placement="bottom">2016.08.31 17:02*</SPAN>               <SPAN class="wordage">字数 
+1814</SPAN>             </DIV></DIV><!-- 如果是当前作者，加入编辑按钮 -->         </DIV><!-- 文章内容 --> 
+        
+<DIV class="show-content" data-note-content="">
+<DIV class="show-content-free">
+<DIV class="image-package">
+<DIV class="image-container" style="max-height: 716px; max-width: 700px;">
+<DIV class="image-container-fill" style="padding-bottom: 102.38%;"></DIV>
+<DIV class="image-view" data-height="860" data-width="840"><IMG 
+data-original-filesize="528657" data-original-format="image/png" 
+data-original-height="860" data-original-width="840" data-original-src="//upload-images.jianshu.io/upload_images/944365-207a738cb165a2da.png"></DIV></DIV>
+<DIV class="image-caption"></DIV></DIV>
+<HR>
+
+<H1>前言</H1>
+<UL>
+  <LI>
+  <P>现在很多<CODE>App</CODE>里都内置了Web网页（<CODE>Hybrid App</CODE>），比如说很多电商平台，淘宝、京东、聚划算等等，如下图<BR></P>
+  <DIV class="image-package">
+  <DIV class="image-container" style="max-height: 526px; max-width: 297px;">
+  <DIV class="image-container-fill" style="padding-bottom: 177.1%;"></DIV>
+  <DIV class="image-view" data-height="526" data-width="297"><IMG 
+  data-original-filesize="259511" data-original-format="image/png" 
+  data-original-height="526" data-original-width="297" data-original-src="//upload-images.jianshu.io/upload_images/944365-4512e70dbf996c34.png"></DIV></DIV>
+  <DIV class="image-caption">京东首页</DIV></DIV>
+  <P></P></LI>
+  <LI>
+  <P>那么这种该如何实现呢？其实这是<CODE>Android</CODE>里一个叫<CODE>WebView</CODE>组件实现</P></LI>
+  <LI>
+  <P>今天，我将献上一份全面介绍 <CODE>WebView</CODE>的常见用法。</P></LI></UL>
+<HR>
+
+<H1>目录</H1>
+<DIV class="image-package">
+<DIV class="image-container" style="max-height: 457px; max-width: 700px;">
+<DIV class="image-container-fill" style="padding-bottom: 44.85%;"></DIV>
+<DIV class="image-view" data-height="457" data-width="1019"><IMG 
+data-original-filesize="32524" data-original-format="image/jpeg" 
+data-original-height="457" data-original-width="1019" data-original-src="//upload-images.jianshu.io/upload_images/944365-e8e5a75c56f059a8.jpg"></DIV></DIV>
+<DIV class="image-caption">文章目录</DIV></DIV>
+<HR>
+
+<H1>1. 简介</H1>
+<P><CODE>WebView</CODE>是一个基于<CODE>webkit</CODE>引擎、展现<CODE>web</CODE>页面的控件。</P>
+<BLOCKQUOTE>
+  <P>Android的Webview在低版本和高版本采用了不同的webkit版本内核，4.4后直接使用了Chrome。</P></BLOCKQUOTE>
+<HR>
+
+<H1>2. 作用</H1>
+<UL>
+  <LI>显示和渲染Web页面</LI>
+  <LI>直接使用html文件（网络上或本地assets中）作布局</LI>
+  <LI>可和JavaScript交互调用</LI></UL>
+<BLOCKQUOTE>
+  <P>WebView控件功能强大，除了具有一般View的属性和设置外，还可以对url请求、页面加载、渲染、页面交互进行强大的处理。</P></BLOCKQUOTE>
+<HR>
+
+<H1>3. 使用介绍</H1>
+<P>一般来说Webview可单独使用，可联合其工具类一起使用，所以接下来，我会介绍：</P>
+<UL>
+  <LI>Webview类自身的常见方法</LI>
+  <LI>Webview的最常用的工具类：WebSettings类、WebViewClient类、WebChromeClient类</LI>
+  <LI>Android 和 Js的交互</LI></UL>
+<H2>3.1 Webview类常用方法</H2>
+<H4>3.1.1 加载url</H4>
+<P>加载方式根据资源分为三种</P>
+<PRE><CODE>
+  //方式1. 加载一个网页：
+  webView.loadUrl("http://www.google.com/");
+
+  //方式2：加载apk包中的html页面
+  webView.loadUrl("file:///android_asset/test.html");
+
+  //方式3：加载手机本地的html页面
+   webView.loadUrl("content://com.android.htmlfileprovider/sdcard/test.html");
+
+   // 方式4： 加载 HTML 页面的一小段内容
+  WebView.loadData(String data, String mimeType, String encoding)
+// 参数说明：
+// 参数1：需要截取展示的内容
+// 内容里不能出现 ’#’, ‘%’, ‘\’ , ‘?’ 这四个字符，若出现了需用 %23, %25, %27, %3f 对应来替代，否则会出现异常
+// 参数2：展示内容的类型
+// 参数3：字节码
+
+
+</CODE></PRE>
+<H4>3.1.1 WebView的状态</H4>
+<PRE><CODE>//激活WebView为活跃状态，能正常执行网页的响应
+webView.onResume() ；
+
+//当页面被失去焦点被切换到后台不可见状态，需要执行onPause
+//通过onPause动作通知内核暂停所有的动作，比如DOM的解析、plugin的执行、JavaScript执行。
+webView.onPause()；
+
+//当应用程序(存在webview)被切换到后台时，这个方法不仅仅针对当前的webview而是全局的全应用程序的webview
+//它会暂停所有webview的layout，parsing，javascripttimer。降低CPU功耗。
+webView.pauseTimers()
+//恢复pauseTimers状态
+webView.resumeTimers()；
+
+//销毁Webview
+//在关闭了Activity时，如果Webview的音乐或视频，还在播放。就必须销毁Webview
+//但是注意：webview调用destory时,webview仍绑定在Activity上
+//这是由于自定义webview构建时传入了该Activity的context对象
+//因此需要先从父容器中移除webview,然后再销毁webview:
+rootLayout.removeView(webView); 
+webView.destroy();
+</CODE></PRE>
+<H4>3.1.2 关于前进 / 后退网页</H4>
+<PRE><CODE>//是否可以后退
+Webview.canGoBack() 
+//后退网页
+Webview.goBack()
+
+//是否可以前进                     
+Webview.canGoForward()
+//前进网页
+Webview.goForward()
+
+//以当前的index为起始点前进或者后退到历史记录中指定的steps
+//如果steps为负数则为后退，正数则为前进
+Webview.goBackOrForward(intsteps) 
+</CODE></PRE>
+<P><STRONG>常见用法：Back键控制网页后退</STRONG></P>
+<UL>
+  <LI>问题：在不做任何处理前提下 ，浏览网页时点击系统的“Back”键,整个 Browser 会调用 finish()而结束自身</LI>
+  <LI>目标：点击返回后，是网页回退而不是推出浏览器</LI>
+  <LI>解决方案：在当前Activity中处理并消费掉该 Back 事件</LI></UL>
+<PRE><CODE>public boolean onKeyDown(int keyCode, KeyEvent event) {
+    if ((keyCode == KEYCODE_BACK) &amp;&amp; mWebView.canGoBack()) { 
+        mWebView.goBack();
+        return true;
+    }
+    return super.onKeyDown(keyCode, event);
+}
+</CODE></PRE>
+<H4>3.1.3 清除缓存数据</H4>
+<PRE><CODE>//清除网页访问留下的缓存
+//由于内核缓存是全局的因此这个方法不仅仅针对webview而是针对整个应用程序.
+Webview.clearCache(true);
+
+//清除当前webview访问的历史记录
+//只会webview访问历史记录里的所有记录除了当前访问记录
+Webview.clearHistory()；
+
+//这个api仅仅清除自动完成填充的表单数据，并不会清除WebView存储到本地的数据
+Webview.clearFormData()；
+</CODE></PRE>
+<H2>3.2 常用工具类</H2>
+<H4>3.2.1 WebSettings类</H4>
+<UL>
+  <LI>作用：对WebView进行配置和管理</LI>
+  <LI>配置步骤 &amp; 常见方法：</LI></UL>
+<P><STRONG>配置步骤1：添加访问网络权限</STRONG>（AndroidManifest.xml）</P>
+<BLOCKQUOTE>
+  <P>这是前提！这是前提！这是前提！</P></BLOCKQUOTE>
+<PRE><CODE>&lt;uses-permission android:name="android.permission.INTERNET"/&gt;
+</CODE></PRE>
+<P><STRONG>配置步骤2：生成一个WebView组件（有两种方式）</STRONG></P>
+<PRE><CODE>//方式1：直接在在Activity中生成
+WebView webView = new WebView(this)
+
+//方法2：在Activity的layout文件里添加webview控件：
+WebView webview = (WebView) findViewById(R.id.webView1);
+</CODE></PRE>
+<P><STRONG>配置步骤3：进行配置-利用WebSettings子类</STRONG>（常见方法）</P>
+<PRE><CODE>//声明WebSettings子类
+WebSettings webSettings = webView.getSettings();
+
+//如果访问的页面中要与Javascript交互，则webview必须设置支持Javascript
+webSettings.setJavaScriptEnabled(true);  
+// 若加载的 html 里有JS 在执行动画等操作，会造成资源浪费（CPU、电量）
+// 在 onStop 和 onResume 里分别把 setJavaScriptEnabled() 给设置成 false 和 true 即可
+
+//支持插件
+webSettings.setPluginsEnabled(true); 
+
+//设置自适应屏幕，两者合用
+webSettings.setUseWideViewPort(true); //将图片调整到适合webview的大小 
+webSettings.setLoadWithOverviewMode(true); // 缩放至屏幕的大小
+
+//缩放操作
+webSettings.setSupportZoom(true); //支持缩放，默认为true。是下面那个的前提。
+webSettings.setBuiltInZoomControls(true); //设置内置的缩放控件。若为false，则该WebView不可缩放
+webSettings.setDisplayZoomControls(false); //隐藏原生的缩放控件
+
+//其他细节操作
+webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK); //关闭webview中缓存 
+webSettings.setAllowFileAccess(true); //设置可以访问文件 
+webSettings.setJavaScriptCanOpenWindowsAutomatically(true); //支持通过JS打开新窗口 
+webSettings.setLoadsImagesAutomatically(true); //支持自动加载图片
+webSettings.setDefaultTextEncodingName("utf-8");//设置编码格式
+</CODE></PRE>
+<P><STRONG>常见用法：设置WebView缓存</STRONG></P>
+<UL>
+  <LI>当加载 html 页面时，WebView会在/data/data/包名目录下生成 database 与 cache 两个文件夹</LI>
+  <LI>请求的 URL记录保存在 WebViewCache.db，而 URL的内容是保存在 WebViewCache 文件夹下</LI>
+  <LI>是否启用缓存：</LI></UL>
+<PRE><CODE>    //优先使用缓存: 
+    WebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK); 
+        //缓存模式如下：
+        //LOAD_CACHE_ONLY: 不使用网络，只读取本地缓存数据
+        //LOAD_DEFAULT: （默认）根据cache-control决定是否从网络上取数据。
+        //LOAD_NO_CACHE: 不使用缓存，只从网络获取数据.
+        //LOAD_CACHE_ELSE_NETWORK，只要本地有，无论是否过期，或者no-cache，都使用缓存中的数据。
+
+    //不使用缓存: 
+    WebView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+</CODE></PRE>
+<UL>
+  <LI>结合使用（离线加载）</LI></UL>
+<PRE><CODE>if (NetStatusUtil.isConnected(getApplicationContext())) {
+    webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);//根据cache-control决定是否从网络上取数据。
+} else {
+    webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);//没网，则从本地获取，即离线加载
+}
+
+webSettings.setDomStorageEnabled(true); // 开启 DOM storage API 功能
+webSettings.setDatabaseEnabled(true);   //开启 database storage API 功能
+webSettings.setAppCacheEnabled(true);//开启 Application Caches 功能
+
+String cacheDirPath = getFilesDir().getAbsolutePath() + APP_CACAHE_DIRNAME;
+webSettings.setAppCachePath(cacheDirPath); //设置  Application Caches 缓存目录
+</CODE></PRE>
+<P><STRONG>注意：</STRONG> 每个 Application 只调用一次 
+WebSettings.setAppCachePath()，WebSettings.setAppCacheMaxSize()</P>
+<H4>3.2.2 WebViewClient类</H4>
+<UL>
+  <LI>作用：处理各种通知 &amp; 请求事件</LI>
+  <LI>常见方法：</LI></UL>
+<P><STRONG>常见方法1：shouldOverrideUrlLoading()</STRONG></P>
+<UL>
+  <LI>作用：打开网页时不调用系统浏览器， 而是在本WebView中显示；在网页上的所有加载都经过这个方法,这个函数我们可以做很多操作。</LI></UL>
+<PRE><CODE>//步骤1. 定义Webview组件
+Webview webview = (WebView) findViewById(R.id.webView1);
+
+//步骤2. 选择加载方式
+  //方式1. 加载一个网页：
+  webView.loadUrl("http://www.google.com/");
+
+  //方式2：加载apk包中的html页面
+  webView.loadUrl("file:///android_asset/test.html");
+
+  //方式3：加载手机本地的html页面
+   webView.loadUrl("content://com.android.htmlfileprovider/sdcard/test.html");
+
+//步骤3. 复写shouldOverrideUrlLoading()方法，使得打开网页时不调用系统浏览器， 而是在本WebView中显示
+    webView.setWebViewClient(new WebViewClient(){
+      @Override
+      public boolean shouldOverrideUrlLoading(WebView view, String url) {
+          view.loadUrl(url);
+      return true;
+      }
+  });
+</CODE></PRE>
+<P><STRONG>常见方法2：onPageStarted()</STRONG></P>
+<UL>
+  <LI>作用：开始载入页面调用的，我们可以设定一个loading的页面，告诉用户程序在等待网络响应。</LI></UL>
+<PRE><CODE>   webView.setWebViewClient(new WebViewClient(){
+     @Override
+     public void  onPageStarted(WebView view, String url, Bitmap favicon) {
+        //设定加载开始的操作
+     }
+ });
+</CODE></PRE>
+<P><STRONG>常见方法3：onPageFinished()</STRONG></P>
+<UL>
+  <LI>作用：在页面加载结束时调用。我们可以关闭loading 条，切换程序动作。</LI></UL>
+<PRE><CODE>    webView.setWebViewClient(new WebViewClient(){
+      @Override
+      public void onPageFinished(WebView view, String url) {
+         //设定加载结束的操作
+      }
+  });
+</CODE></PRE>
+<P><STRONG>常见方法4：onLoadResource()</STRONG></P>
+<UL>
+  <LI>作用：在加载页面资源时会调用，每一个资源（比如图片）的加载都会调用一次。</LI></UL>
+<PRE><CODE>    webView.setWebViewClient(new WebViewClient(){
+      @Override
+      public boolean onLoadResource(WebView view, String url) {
+         //设定加载资源的操作
+      }
+  });
+</CODE></PRE>
+<P><STRONG>常见方法5：onReceivedError（）</STRONG></P>
+<UL>
+  <LI>作用：加载页面的服务器出现错误时（如404）调用。</LI></UL>
+<BLOCKQUOTE>
+  <P>App里面使用webview控件的时候遇到了诸如404这类的错误的时候，若也显示浏览器里面的那种错误提示页面就显得很丑陋了，那么这个时候我们的app就需要加载一个本地的错误提示页面，即webview如何加载一个本地的页面</P></BLOCKQUOTE>
+<PRE><CODE>//步骤1：写一个html文件（error_handle.html），用于出错时展示给用户看的提示页面
+//步骤2：将该html文件放置到代码根目录的assets文件夹下
+
+//步骤3：复写WebViewClient的onRecievedError方法
+//该方法传回了错误码，根据错误类型可以进行不同的错误分类处理
+    webView.setWebViewClient(new WebViewClient(){
+      @Override
+      public void onReceivedError(WebView view, int errorCode, String description, String failingUrl){
+switch(errorCode)
+                {
+                case HttpStatus.SC_NOT_FOUND:
+                    view.loadUrl("file:///android_assets/error_handle.html");
+                    break;
+                }
+            }
+        });
+</CODE></PRE>
+<P><STRONG>常见方法6：onReceivedSslError()</STRONG></P>
+<UL>
+  <LI>作用：处理https请求</LI></UL>
+<BLOCKQUOTE>
+  <P>webView默认是不处理https请求的，页面显示空白，需要进行如下设置：</P></BLOCKQUOTE>
+<PRE><CODE>webView.setWebViewClient(new WebViewClient() {    
+        @Override    
+        public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {    
+            handler.proceed();    //表示等待证书响应
+        // handler.cancel();      //表示挂起连接，为默认方式
+        // handler.handleMessage(null);    //可做其他处理
+        }    
+    });  
+
+// 特别注意：5.1以上默认禁止了https和http混用，以下方式是开启
+if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.LOLLIPOP) {
+mWebView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+}
+</CODE></PRE>
+<H4>3.2.3 WebChromeClient类</H4>
+<UL>
+  <LI>作用：辅助 WebView 处理 Javascript 的对话框,网站图标,网站标题等等。</LI>
+  <LI>常见使用：</LI></UL>
+<P><STRONG>常见方法1： onProgressChanged（）</STRONG></P>
+<UL>
+  <LI>作用：获得网页的加载进度并显示</LI></UL>
+<PRE><CODE>webview.setWebChromeClient(new WebChromeClient(){
+
+      @Override
+      public void onProgressChanged(WebView view, int newProgress) {
+          if (newProgress &lt; 100) {
+              String progress = newProgress + "%";
+              progress.setText(progress);
+            } else {
+        }
+    });
+</CODE></PRE>
+<P><STRONG>常见方法2： onReceivedTitle（）</STRONG></P>
+<UL>
+  <LI>作用：获取Web页中的标题</LI></UL>
+<BLOCKQUOTE>
+  <P>每个网页的页面都有一个标题，比如<A href="https://link.jianshu.com/?t=http%3A%2F%2Fwww.baidu.com" 
+  target="_blank" 
+  rel="nofollow">www.baidu.com</A>这个页面的标题即“百度一下，你就知道”，那么如何知道当前webview正在加载的页面的title并进行设置呢？</P></BLOCKQUOTE>
+<PRE><CODE>webview.setWebChromeClient(new WebChromeClient(){
+
+    @Override
+    public void onReceivedTitle(WebView view, String title) {
+       titleview.setText(title)；
+    }
+</CODE></PRE>
+<P><STRONG>常见方法3： onJsAlert（）</STRONG></P>
+<UL>
+  <LI>作用：支持javascript的警告框</LI></UL>
+<BLOCKQUOTE>
+  <P>一般情况下在 Android 中为 Toast，在文本里面加入\n就可以换行</P></BLOCKQUOTE>
+<PRE><CODE>webview.setWebChromeClient(new WebChromeClient() {
+            
+            @Override
+            public boolean onJsAlert(WebView view, String url, String message, final JsResult result)  {
+    new AlertDialog.Builder(MainActivity.this)
+            .setTitle("JsAlert")
+            .setMessage(message)
+            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    result.confirm();
+                }
+            })
+            .setCancelable(false)
+            .show();
+    return true;
+            }
+</CODE></PRE>
+<P><STRONG>常见方法4： onJsConfirm（）</STRONG></P>
+<UL>
+  <LI>作用：支持javascript的确认框</LI></UL>
+<PRE><CODE>webview.setWebChromeClient(new WebChromeClient() {
+        
+            @Override
+public boolean onJsConfirm(WebView view, String url, String message, final JsResult result) {
+    new AlertDialog.Builder(MainActivity.this)
+            .setTitle("JsConfirm")
+            .setMessage(message)
+            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    result.confirm();
+                }
+            })
+            .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    result.cancel();
+                }
+            })
+            .setCancelable(false)
+            .show();
+// 返回布尔值：判断点击时确认还是取消
+// true表示点击了确认；false表示点击了取消；
+    return true;
+}
+
+            
+</CODE></PRE>
+<P><STRONG>常见方法5： onJsPrompt（）</STRONG></P>
+<UL>
+  <LI>作用：支持javascript输入框</LI></UL>
+<BLOCKQUOTE>
+  <P>点击确认返回输入框中的值，点击取消返回 null。</P></BLOCKQUOTE>
+<PRE><CODE>webview.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public boolean onJsPrompt(WebView view, String url, String message, String defaultValue, final JsPromptResult result) {
+    final EditText et = new EditText(MainActivity.this);
+    et.setText(defaultValue);
+    new AlertDialog.Builder(MainActivity.this)
+            .setTitle(message)
+            .setView(et)
+            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    result.confirm(et.getText().toString());
+                }
+            })
+            .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    result.cancel();
+                }
+            })
+            .setCancelable(false)
+            .show();
+
+    return true;
+}
+            
+</CODE></PRE>
+<H1>3.3 WebView与JavaScript的交互</H1>
+<P>具体请看我写的文章：<A href="https://www.jianshu.com/p/345f4d8a5cfa" 
+target="_blank">最全面 &amp; 最详细的 Android WebView与JS的交互方式 汇总</A></P>
+<H1>3.4 注意事项：如何避免WebView内存泄露？</H1>
+<P><STRONG>3.4.1 不在xml中定义 Webview ，而是在需要的时候在Activity中创建，并且Context使用 
+getApplicationgContext()</STRONG></P>
+<PRE><CODE>LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        mWebView = new WebView(getApplicationContext());
+        mWebView.setLayoutParams(params);
+        mLayout.addView(mWebView);
+</CODE></PRE>
+<P><STRONG>3.4.2 在 Activity 销毁（ WebView ）的时候，先让 WebView 加载null内容，然后移除 
+WebView，再销毁 WebView，最后置空。</STRONG></P>
+<PRE><CODE>@Override
+    protected void onDestroy() {
+        if (mWebView != null) {
+            mWebView.loadDataWithBaseURL(null, "", "text/html", "utf-8", null);
+            mWebView.clearHistory();
+
+            ((ViewGroup) mWebView.getParent()).removeView(mWebView);
+            mWebView.destroy();
+            mWebView = null;
+        }
+        super.onDestroy();
+    }
+</CODE></PRE>
+<HR>
+
+<H1>4. 实例</H1>
+<UL>
+  <LI>目标：实现显示“<A href="https://link.jianshu.com/?t=http%3A%2F%2Fwww.baidu.com" 
+  target="_blank" rel="nofollow">www.baidu.com</A>”、获取其标题、提示加载开始 &amp; 
+  结束和获取加载进度</LI>
+  <LI>具体实现：</LI></UL>
+<P><STRONG>步骤1：添加访问网络权限</STRONG></P>
+<BLOCKQUOTE>
+  <P>这是前提！这是前提！这是前提！</P></BLOCKQUOTE>
+<P><EM>AndroidManifest.xml</EM></P>
+<PRE><CODE>&lt;uses-permission android:name="android.permission.INTERNET"/&gt;
+</CODE></PRE>
+<P><STRONG>步骤2：主布局</STRONG><BR><EM>activity_main.xml</EM></P>
+<PRE><CODE>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.carson_ho.webview_demo.MainActivity"&gt;
+
+
+   &lt;!-- 获取网站的标题--&gt;
+    &lt;TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/&gt;
+
+    &lt;!--开始加载提示--&gt;
+    &lt;TextView
+        android:id="@+id/text_beginLoading"
+        android:layout_below="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/&gt;
+
+    &lt;!--获取加载进度--&gt;
+    &lt;TextView
+        android:layout_below="@+id/text_beginLoading"
+        android:id="@+id/text_Loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/&gt;
+
+    &lt;!--结束加载提示--&gt;
+    &lt;TextView
+        android:layout_below="@+id/text_Loading"
+        android:id="@+id/text_endLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/&gt;
+    
+    &lt;!--显示网页区域--&gt;
+    &lt;WebView
+        android:id="@+id/webView1"
+        android:layout_below="@+id/text_endLoading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dp" /&gt;
+&lt;/RelativeLayout&gt;
+
+</CODE></PRE>
+<P><STRONG>步骤3：根据需要实现的功能从而使用相应的子类及其方法（注释很清楚了）</STRONG><BR><EM>MainActivity.java</EM></P>
+<PRE><CODE>package com.example.carson_ho.webview_demo;
+
+import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
+import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.TextView;
+
+
+public class MainActivity extends AppCompatActivity {
+    WebView mWebview;
+    WebSettings mWebSettings;
+    TextView beginLoading,endLoading,loading,mtitle;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+        mWebview = (WebView) findViewById(R.id.webView1);
+        beginLoading = (TextView) findViewById(R.id.text_beginLoading);
+        endLoading = (TextView) findViewById(R.id.text_endLoading);
+        loading = (TextView) findViewById(R.id.text_Loading);
+        mtitle = (TextView) findViewById(R.id.title);
+
+        mWebSettings = mWebview.getSettings();
+
+        mWebview.loadUrl("http://www.baidu.com/");
+
+        
+        //设置不用系统浏览器打开,直接显示在当前Webview
+        mWebview.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                view.loadUrl(url);
+                return true;
+            }
+        });
+
+        //设置WebChromeClient类
+        mWebview.setWebChromeClient(new WebChromeClient() {
+
+
+            //获取网站标题
+            @Override
+            public void onReceivedTitle(WebView view, String title) {
+                System.out.println("标题在这里");
+                mtitle.setText(title);
+            }
+
+
+            //获取加载进度
+            @Override
+            public void onProgressChanged(WebView view, int newProgress) {
+                if (newProgress &lt; 100) {
+                    String progress = newProgress + "%";
+                    loading.setText(progress);
+                } else if (newProgress == 100) {
+                    String progress = newProgress + "%";
+                    loading.setText(progress);
+                }
+            }
+        });
+
+
+        //设置WebViewClient类
+        mWebview.setWebViewClient(new WebViewClient() {
+            //设置加载前的函数
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                System.out.println("开始加载了");
+                beginLoading.setText("开始加载了");
+
+            }
+
+            //设置结束加载函数
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                endLoading.setText("结束加载了");
+
+            }
+        });
+    }
+
+    //点击返回上一页面而不是退出浏览器
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK &amp;&amp; mWebview.canGoBack()) {
+            mWebview.goBack();
+            return true;
+        }
+
+        return super.onKeyDown(keyCode, event);
+    }
+
+    //销毁Webview
+    @Override
+    protected void onDestroy() {
+        if (mWebview != null) {
+            mWebview.loadDataWithBaseURL(null, "", "text/html", "utf-8", null);
+            mWebview.clearHistory();
+
+            ((ViewGroup) mWebview.getParent()).removeView(mWebview);
+            mWebview.destroy();
+            mWebview = null;
+        }
+        super.onDestroy();
+    }
+}
+
+</CODE></PRE>
+<H1>源代码:<A href="https://link.jianshu.com/?t=https%3A%2F%2Fgithub.com%2FCarson-Ho%2FWebview_Demo" 
+target="_blank" rel="nofollow">Carson_Ho的Github-WebviewDemo</A> </H1>
+<HR>
+
+<H1>5. 总结</H1>
+<UL>
+  <LI>本文全面介绍了<CODE>Webview</CODE>，总结如下</LI></UL>
+<DIV class="image-package">
+<DIV class="image-container" style="max-height: 440px; max-width: 700px;">
+<DIV class="image-container-fill" style="padding-bottom: 60.27%;"></DIV>
+<DIV class="image-view" data-height="440" data-width="730"><IMG 
+data-original-filesize="68061" data-original-format="image/png" 
+data-original-height="440" data-original-width="730" data-original-src="//upload-images.jianshu.io/upload_images/944365-6e249d5a3cc7d343.png"></DIV></DIV>
+<DIV class="image-caption">示意图</DIV></DIV>
+<UL>
+  <LI>
+  <P>关于<CODE>WebView</CODE>知识具体请看下列文章<BR><A href="https://www.jianshu.com/p/3c94ae673e2a" 
+  target="_blank">Android开发：最全面、最易懂的Webview详解</A><BR><A href="https://www.jianshu.com/p/345f4d8a5cfa" 
+  target="_blank">最全面总结 Android WebView与 JS 的交互方式</A><BR><A href="https://www.jianshu.com/p/5e7075f4875f" 
+  target="_blank">手把手教你构建 Android WebView 的缓存机制 &amp; 资源预加载方案</A><BR><A href="https://www.jianshu.com/p/3a345d27cd42" 
+  target="_blank">你不知道的 Android WebView 使用漏洞</A></P></LI>
+  <LI>
+  <P>接下来我会继续讲解其他安卓开发的知识，有兴趣可以继续关注<A href="https://www.jianshu.com/users/383970bef0a0/latest_articles" 
+  target="_blank">Carson_Ho的安卓开发笔记</A>！！！！</P></LI></UL>
+<HR>
+
+<H1>请点赞！因为你的鼓励是我写作的最大动力！</H1>
+<BLOCKQUOTE>
+  <P><STRONG>相关文章阅读</STRONG><BR><A href="https://www.jianshu.com/p/6e5eda3a51af" 
+  target="_blank">1分钟全面了解“设计模式”</A><BR><A href="https://www.jianshu.com/p/ec5a1a30694b" 
+  target="_blank">Android开发：最全面、最易懂的Android屏幕适配解决方案</A><BR><A href="https://www.jianshu.com/p/9fe944ee02f7" 
+  target="_blank">Android开发：Handler异步通信机制全面解析（包含Looper、Message Queue）</A><BR><A 
+  href="https://www.jianshu.com/p/ce1d060573ba" 
+  target="_blank">Android开发：顶部Tab导航栏实现（TabLayout+ViewPager+Fragment）</A><BR><A 
+  href="https://www.jianshu.com/p/a663803b2a44" 
+  target="_blank">Android开发：底部Tab菜单栏实现（FragmentTabHost+ViewPager）</A><BR><A 
+  href="https://www.jianshu.com/p/b87fee2f7a23" 
+  target="_blank">Android开发：JSON简介及最全面解析方法!</A><BR><A href="https://www.jianshu.com/p/e636f4f8487b" 
+  target="_blank">Android开发：XML简介及DOM、SAX、PULL解析对比</A></P></BLOCKQUOTE>
+<HR>
+
+<H3>欢迎关注<A href="https://www.jianshu.com/users/383970bef0a0/latest_articles" 
+target="_blank">Carson_Ho</A>的简书！</H3>
+<P>不定期分享关于<STRONG>安卓开发</STRONG>的干货，追求<STRONG>短、平、快</STRONG>，但<STRONG>却不缺深度</STRONG>。<BR></P>
+<DIV class="image-package">
+<DIV class="image-container" style="max-height: 716px; max-width: 700px;">
+<DIV class="image-container-fill" style="padding-bottom: 102.38%;"></DIV>
+<DIV class="image-view" data-height="860" data-width="840"><IMG 
+data-original-filesize="537233" data-original-format="image/png" 
+data-original-height="860" data-original-width="840" data-original-src="//upload-images.jianshu.io/upload_images/944365-9b76fa3c52d478a7.png"></DIV></DIV>
+<DIV class="image-caption"></DIV></DIV>
+<P></P></DIV></DIV></DIV><!-- 连载目录项 -->     <!-- 打赏文章、购买文章、购买连载 -->         
+<DIV data-vcomp="free-reward-panel"></DIV>
+<DIV class="show-foot"><A class="notebook" href="https://www.jianshu.com/nb/3540089"><I 
+class="iconfont ic-search-notebook"></I>           <SPAN>Android 开发</SPAN> </A>  
+      
+<DIV class="copyright" data-original-title="转载请联系作者获得授权，并标注“简书作者”。" data-toggle="tooltip" 
+data-html="true">© 著作权归作者所有         </DIV>
+<DIV class="modal-wrap" data-report-note=""><A id="report-modal">举报文章</A>        
+ </DIV></DIV><!-- 文章底部作者信息 -->         
+<DIV class="follow-detail">
+<DIV class="info"><A class="avatar" href="https://www.jianshu.com/u/383970bef0a0"><IMG 
+alt="96" src="Use_WebView_JianShu_files/e32cb66f99ea.jpg"> </A>
+<DIV data-author-follow-button="" 
+props-data-classes="user-follow-button-footer"></DIV><A class="title" href="https://www.jianshu.com/u/383970bef0a0">Carson_Ho</A> 
+            <IMG title="简书程序员优秀作者" class="badge-icon" alt="595a1b60 08f6 4beb 998f 2bf55e230555" 
+src="Use_WebView_JianShu_files/595a1b60-08f6-4beb-998f-2bf55e230555" 
+data-toggle="tooltip">           </DIV>
+<DIV class="signature">简书认证作者、CSDN签约作者、稀土掘金专栏作者 定位：分享 Android开发 干货  
+Github：https://github.com/Carson-Ho  </DIV></DIV>
+<DIV class="meta-bottom">
+<DIV class="btn like-group"></DIV>
+<DIV class="share-group"><A class="share-circle" data-original-title="分享到微信" 
+data-toggle="tooltip" data-action="weixin-share"><I 
+class="iconfont ic-wechat"></I>         </A>         <A class="share-circle" 
+href="javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f='http://v.t.sina.com.cn/share/share.php?appkey=1881139527',u=z||d.location,p=['&amp;url=',e(u),'&amp;title=',e(t||d.title),'&amp;source=',e(r),'&amp;sourceUrl=',e(l),'&amp;content=',c||'gb2312','&amp;pic=',e(p||'')].join('');function%20a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=440,height=430,left=',(s.width-440)/2,',top=',(s.height-430)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,'','','http://cwb.assets.jianshu.io/notes/images/5509828/weibo/image_73166e16a3fa.jpg', '推荐 @何家成___ 的文章《Android：这是一份全面 &amp;amp; 详细的Webview使用攻略》（ 分享自 @简书 ）','https://www.jianshu.com/p/3c94ae673e2a?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=weibo','页面编码gb2312|utf-8默认gb2312'));" 
+data-original-title="分享到微博" data-toggle="tooltip" data-action="weibo-share"><I 
+class="iconfont ic-weibo"></I>         </A>           <A class="share-circle" 
+href="http://cwb.assets.jianshu.io/notes/images/5509828/weibo/image_73166e16a3fa.jpg" 
+target="_blank" data-original-title="下载长微博图片" data-toggle="tooltip"><I class="iconfont ic-picture"></I> 
+          </A>         <A tabindex="0" class="share-circle more-share" href="javascript:void(0);" 
+data-toggle="popover" data-placement="top" data-html="true" data-content="&#10;          <ul class=&quot;share-list&quot;>&#10;            <li><a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r='http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+e('https://www.jianshu.com/p/3c94ae673e2a?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=qzone')+'&amp;title='+e('推荐 Carson_Ho 的文章《Android：这是一份全面 &amp;amp; 详细的Webview使用攻略》'),x=function(){if(!window.open(r,'qzone','toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600'))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;><i class=&quot;social-icon-sprite social-icon-zone&quot;></i><span>分享到QQ空间</span></a></li>&#10;            <li><a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r='https://twitter.com/share?url='+e('https://www.jianshu.com/p/3c94ae673e2a?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=twitter')+'&amp;text='+e('推荐 Carson_Ho 的文章《Android：这是一份全面 &amp;amp; 详细的Webview使用攻略》（ 分享自 @jianshucom ）')+'&amp;related='+e('jianshucom'),x=function(){if(!window.open(r,'twitter','toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600'))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;><i class=&quot;social-icon-sprite social-icon-twitter&quot;></i><span>分享到Twitter</span></a></li>&#10;            <li><a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r='https://www.facebook.com/dialog/share?app_id=483126645039390&amp;display=popup&amp;href=https://www.jianshu.com/p/3c94ae673e2a?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=facebook',x=function(){if(!window.open(r,'facebook','toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330'))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;><i class=&quot;social-icon-sprite social-icon-facebook&quot;></i><span>分享到Facebook</span></a></li>&#10;            <li><a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r='https://plus.google.com/share?url='+e('https://www.jianshu.com/p/3c94ae673e2a?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=google_plus'),x=function(){if(!window.open(r,'google_plus','toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330'))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;><i class=&quot;social-icon-sprite social-icon-google&quot;></i><span>分享到Google+</span></a></li>&#10;            <li><a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:'',r='http://www.douban.com/recommend/?url='+e('https://www.jianshu.com/p/3c94ae673e2a?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=douban')+'&amp;title='+e('Android：这是一份全面 &amp;amp; 详细的Webview使用攻略')+'&amp;sel='+e(s)+'&amp;v=1',x=function(){if(!window.open(r,'douban','toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330'))location.href=r+'&amp;r=1'};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()&quot;><i class=&quot;social-icon-sprite social-icon-douban&quot;></i><span>分享到豆瓣</span></a></li>&#10;          </ul>&#10;        " 
+data-trigger="focus">更多分享</A>       </DIV></DIV><A id="web-note-ad-1" href="https://www.jianshu.com/apps/download?utm_source=nbc" 
+target="_blank"><IMG alt="Web note ad 1" src="Use_WebView_JianShu_files/web-note-ad-1-10f08e404d3887d2d45a4bc8f1831403.png"></A>
+<DIV id="vue_comment"></DIV></DIV>
+<DIV class="vue-side-tool" props-data-props-show-qr-code="0"></DIV></DIV>
+<DIV class="note-bottom">
+<DIV class="js-included-collections"></DIV>
+<DIV data-vcomp="recommended-notes" data-note-id="5509828" 
+data-lazy="1.5"></DIV><!-- 相关文章 -->   
+<DIV class="seo-recommended-notes">
+<DIV class="note "><A class="title" href="https://www.jianshu.com/p/dad51f6c9c4d?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">Android - 收藏集  </A>
+<P class="description">用两张图告诉你，为什么你的 App 会卡顿? - Android - 掘金 Cover 有什么料？ 
+从这篇文章中你能获得这些料： 知道setContentView()之后发生了什么？ ... Android 获取 View 宽高的常用正确方式，避免为零 - 
+掘金 相信有很多...</P><A class="author" href="https://www.jianshu.com/u/e946d18f163c?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">
+<DIV class="avatar"><IMG alt="48" src="Use_WebView_JianShu_files/4-3397163ecdb3855a0a4139c34a695885.jpg"> 
+            </DIV><SPAN class="name">passiontim</SPAN> </A>        </DIV>
+<DIV class="note "><A class="title" href="https://www.jianshu.com/p/5ad013eb5364?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">Android - 收藏集 - 掘金</A>
+<P class="description">用两张图告诉你，为什么你的 App 会卡顿? - Android - 掘金Cover 有什么料？ 
+从这篇文章中你能获得这些料： 知道setContentView()之后发生了什么？ ... Android 获取 View 宽高的常用正确方式，避免为零 - 
+掘金相信有很多朋友...</P><A class="author" href="https://www.jianshu.com/u/5fc9b6410f4f?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">
+<DIV class="avatar"><IMG alt="48" src="Use_WebView_JianShu_files/6220dd63-bf1a-40a8-8ccc-e364a5c90f13.png"> 
+            </DIV><SPAN class="name">掘金官方</SPAN> </A>        </DIV>
+<DIV class="note have-img"><A class="cover" href="https://www.jianshu.com/p/fd61e8f4049e?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank"><IMG alt="240" src="Use_WebView_JianShu_files/877678-858a41d06f0df835.png"> 
+</A>          <A class="title" href="https://www.jianshu.com/p/fd61e8f4049e?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">Android WebView 全面干货指南</A>
+<P class="description">前言 总结 Android WebView 常用的相关知识点，令包含以下干货内容分析：Js注入漏洞、WebView 
+遇到的坑、JsBridge 原理以及框架使用(JsBridge,DSBridge-Android)、缓存机制应用、性能优化、腾讯开源框架 VasSonic 
+(...</P><A class="author" href="https://www.jianshu.com/u/fa272f63280a?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">
+<DIV class="avatar"><IMG alt="48" src="Use_WebView_JianShu_files/2d442a0d8106.jpg"> 
+            </DIV><SPAN class="name">無名小子的杂货铺</SPAN> </A>        </DIV>
+<DIV class="note have-img"><A class="cover" href="https://www.jianshu.com/p/d55c722248ca?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank"><IMG alt="240" src="Use_WebView_JianShu_files/1479676-60f1cee69ffd679b.png"> 
+</A>          <A class="title" href="https://www.jianshu.com/p/d55c722248ca?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">android webview详解，常见漏洞详解和安全源码</A>
+<P class="description">这篇博客主要来介绍 WebView 
+的相关使用方法，常见的几个漏洞，开发中可能遇到的坑和最后解决相应漏洞的源码，以及针对该源码的解析。转载请注明出处：http://blog.csdn.net/self_study/article/details/54928371。对技术感兴...</P><A 
+class="author" href="https://www.jianshu.com/u/0265652fcb78?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">
+<DIV class="avatar"><IMG alt="48" src="Use_WebView_JianShu_files/49f4ea32ff7b.jpg"> 
+            </DIV><SPAN class="name">Shawn_Dut</SPAN> </A>        </DIV>
+<DIV class="note "><A class="title" href="https://www.jianshu.com/p/2a2777f4863e?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">WebView的使用</A>
+<P class="description">WebView简介 String getUrl()：获取当前页面的URL。 
+reload()：重新reload当前的URL，即刷新。 boolean 
+canGoBack()：用来确认WebView里是否还有可回退的历史记录。通常我们会在WebView里重写返回键的点击事件，...</P><A class="author" 
+href="https://www.jianshu.com/u/c374c3516e60?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">
+<DIV class="avatar"><IMG alt="48" src="Use_WebView_JianShu_files/9-cceda3cf5072bcdd77e8ca4f21c40998.jpg"> 
+            </DIV><SPAN class="name">酷酷_明</SPAN> </A>        </DIV>
+<DIV class="note have-img"><A class="cover" href="https://www.jianshu.com/p/dd9996afcf36?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank"><IMG alt="240" src="Use_WebView_JianShu_files/4374672-f7245e4484e8276f.jpg"> 
+</A>          <A class="title" href="https://www.jianshu.com/p/dd9996afcf36?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">千年古韵如诗如画  “诗经里“小镇亮相大西安</A>
+<P 
+class="description">蒹葭苍苍，白露为霜；沣河潺潺，清水安澜。千年古韵，如诗如画；五年匠心，化蛹成蝶。历经五年精心规划、设计和建设，9月27日，在《诗经》发源地西安沣河东岸，全国首个诗经主题特色小镇——“沣滨水镇·诗经里”建成开园。 
+“沣滨水镇·诗经里”位于西咸新区沣东新城的沣河生态景区内，是陕...</P><A class="author" href="https://www.jianshu.com/u/366fb82c2e04?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">
+<DIV class="avatar"><IMG alt="48" src="Use_WebView_JianShu_files/2f05bfd76dc8.jpg"> 
+            </DIV><SPAN class="name">杨尔蒂尼</SPAN> </A>        </DIV>
+<DIV class="note "><A class="title" href="https://www.jianshu.com/p/bc5fc10a44d5?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">小时候存的那些钱都花去哪儿了？</A>
+<P class="description">01 
+我相信每个人的童年记忆中，无论是床头，还是书桌上都有一只胖嘟嘟的小猪存钱罐。这只小猪呢，只会干一件事情，就是永远不喊饱的吃！吃！吃！吃人民币！很多时候，就算是现在，如果你回家捣鼓那些老古董的时候，最有可能到现在还保留的就是存钱罐，估计拿着存钱罐你或多或少都会想起不少有...</P><A 
+class="author" href="https://www.jianshu.com/u/8c33186159ac?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">
+<DIV class="avatar"><IMG alt="48" src="Use_WebView_JianShu_files/2bdb461150b0.jpg"> 
+            </DIV><SPAN class="name">羊入胡口</SPAN> </A>        </DIV>
+<DIV class="note have-img"><A class="cover" href="https://www.jianshu.com/p/127f3e4e5509?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank"><IMG alt="240" src="Use_WebView_JianShu_files/3832322-a4710befc657e223.png"> 
+</A>          <A class="title" href="https://www.jianshu.com/p/127f3e4e5509?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">5.4 致那些年我们一起走过的青春</A>
+<P class="description"></P><A class="author" href="https://www.jianshu.com/u/48cda5db7ca1?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">
+<DIV class="avatar"><IMG alt="48" src="Use_WebView_JianShu_files/4ce7b8e3-0607-41de-9166-d303d2062578.jpg"> 
+            </DIV><SPAN class="name">砧弟</SPAN> </A>        </DIV>
+<DIV class="note "><A class="title" href="https://www.jianshu.com/p/142276dfbb31?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">2016-3-18论语3.26学习心得（69）</A>
+<P class="description">【原文】子曰：“居上不宽，为礼不敬，临丧不哀，吾何以观之哉！” 
+【译文】孔子说：“处在上层地位不宽宏大量，举行礼仪的时候不恭敬严肃，参加丧事的时候不悲哀，这我怎么能看得下去呢！” 
+【鲍建竹解读】这段话是孔子针对当时居上位者所做的批评。他认为身居上位者，对下属要宽容，行礼要敬...</P><A class="author" href="https://www.jianshu.com/u/754a009a113b?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">
+<DIV class="avatar"><IMG alt="48" src="Use_WebView_JianShu_files/b53a6c798633.jpg"> 
+            </DIV><SPAN class="name">云在高处</SPAN> </A>        </DIV>
+<DIV class="note have-img"><A class="cover" href="https://www.jianshu.com/p/c9618c8e25b4?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank"><IMG alt="240" src="Use_WebView_JianShu_files/4294978-fcbacd58f2439d38.jpg"> 
+</A>          <A class="title" href="https://www.jianshu.com/p/c9618c8e25b4?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">小香港</A>
+<P class="description">开业送的一个Q包，好吃啊！超香！</P><A class="author" href="https://www.jianshu.com/u/838fd4c32d1f?utm_campaign=maleskine&amp;utm_content=user&amp;utm_medium=seo_notes&amp;utm_source=recommendation" 
+target="_blank">
+<DIV class="avatar"><IMG alt="48" src="Use_WebView_JianShu_files/2a2887aeffdb.jpg"> 
+            </DIV><SPAN class="name">菠00</SPAN> </A>        </DIV></DIV></DIV>
+<SCRIPT type="application/json" data-name="page-data">{"user_signed_in":false,"locale":"zh-CN","os":"windows","read_mode":"day","read_font":"font2","note_show":{"is_martin_user":false,"is_author":false,"is_following_author":false,"is_liked_note":false,"follow_state":0,"uuid":"69b4a7ea-c765-40f9-91b2-193d1b766a3a"},"note":{"id":5509828,"slug":"3c94ae673e2a","user_id":944365,"notebook_id":3540089,"commentable":true,"likes_count":358,"views_count":76750,"public_wordage":1814,"comments_count":28,"total_rewards_count":1,"is_author":false,"paid_type":"free","paid_content_accessible":false,"author":{"nickname":"Carson_Ho","total_wordage":256780,"followers_count":17026,"total_likes_count":11479}}}</SCRIPT>
+         
+<SCRIPT src="//cdn2.jianshu.io/assets/babel-polyfill-2bec152a537b07763933.js" crossorigin="anonymous"></SCRIPT>
+     
+<SCRIPT src="//cdn2.jianshu.io/assets/web-base-385c3de2e7320b19dd57.js" crossorigin="anonymous"></SCRIPT>
+ 
+<SCRIPT src="//cdn2.jianshu.io/assets/web-0d50c2207a66edf142d7.js" crossorigin="anonymous"></SCRIPT>
+         
+<SCRIPT src="//cdn2.jianshu.io/assets/web/pages/notes/show/entry-7c525fbac1cd5e0be88d.js" crossorigin="anonymous"></SCRIPT>
+     
+<SCRIPT>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+</SCRIPT>
+   </BODY></HTML>

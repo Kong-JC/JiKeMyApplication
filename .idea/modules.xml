@@ -3,8 +3,27 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JiKeMyApplication.iml" filepath="$PROJECT_DIR$/JiKeMyApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidtojs/androidtojs.iml" filepath="$PROJECT_DIR$/androidtojs/androidtojs.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/assetsdemo/assetsdemo.iml" filepath="$PROJECT_DIR$/assetsdemo/assetsdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/deliciousfood/deliciousfood.iml" filepath="$PROJECT_DIR$/deliciousfood/deliciousfood.iml" />
+      <module fileurl="file://$PROJECT_DIR$/downloaddata/downloaddata.iml" filepath="$PROJECT_DIR$/downloaddata/downloaddata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/downloadimage/downloadimage.iml" filepath="$PROJECT_DIR$/downloadimage/downloadimage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/filedemo/filedemo.iml" filepath="$PROJECT_DIR$/filedemo/filedemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsondemo/jsondemo.iml" filepath="$PROJECT_DIR$/jsondemo/jsondemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lessionstable/lessionstable.iml" filepath="$PROJECT_DIR$/lessionstable/lessionstable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/meituangrid/meituangrid.iml" filepath="$PROJECT_DIR$/meituangrid/meituangrid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multiselection/multiselection.iml" filepath="$PROJECT_DIR$/multiselection/multiselection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mycontentprovider/mycontentprovider.iml" filepath="$PROJECT_DIR$/mycontentprovider/mycontentprovider.iml" />
       <module fileurl="file://$PROJECT_DIR$/mydetailedlist/mydetailedlist.iml" filepath="$PROJECT_DIR$/mydetailedlist/mydetailedlist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/neterrorview/neterrorview.iml" filepath="$PROJECT_DIR$/neterrorview/neterrorview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/progressbars/progressbars.iml" filepath="$PROJECT_DIR$/progressbars/progressbars.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pullxmldemo/pullxmldemo.iml" filepath="$PROJECT_DIR$/pullxmldemo/pullxmldemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shardpreferencedemo/shardpreferencedemo.iml" filepath="$PROJECT_DIR$/shardpreferencedemo/shardpreferencedemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/singleselection/singleselection.iml" filepath="$PROJECT_DIR$/singleselection/singleselection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sqlitedeom/sqlitedeom.iml" filepath="$PROJECT_DIR$/sqlitedeom/sqlitedeom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testndk/testndk.iml" filepath="$PROJECT_DIR$/testndk/testndk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/timeanddatepicker/timeanddatepicker.iml" filepath="$PROJECT_DIR$/timeanddatepicker/timeanddatepicker.iml" />
     </modules>
   </component>
 </project>
