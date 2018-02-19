@@ -8,27 +8,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/androidtojs" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/assetsdemo" />
-            <option value="$PROJECT_DIR$/deliciousfood" />
-            <option value="$PROJECT_DIR$/downloaddata" />
-            <option value="$PROJECT_DIR$/downloadimage" />
-            <option value="$PROJECT_DIR$/filedemo" />
-            <option value="$PROJECT_DIR$/jsondemo" />
-            <option value="$PROJECT_DIR$/lessionstable" />
-            <option value="$PROJECT_DIR$/meituangrid" />
-            <option value="$PROJECT_DIR$/multiselection" />
-            <option value="$PROJECT_DIR$/mycontentprovider" />
-            <option value="$PROJECT_DIR$/mydetailedlist" />
-            <option value="$PROJECT_DIR$/neterrorview" />
-            <option value="$PROJECT_DIR$/progressbars" />
-            <option value="$PROJECT_DIR$/pullxmldemo" />
-            <option value="$PROJECT_DIR$/shardpreferencedemo" />
-            <option value="$PROJECT_DIR$/singleselection" />
-            <option value="$PROJECT_DIR$/sqlitedeom" />
-            <option value="$PROJECT_DIR$/testndk" />
-            <option value="$PROJECT_DIR$/timeanddatepicker" />
+            <option value="$PROJECT_DIR$/aidlclient" />
+            <option value="$PROJECT_DIR$/aidlservice" />
+            <option value="$PROJECT_DIR$/messengerclient" />
+            <option value="$PROJECT_DIR$/messengerservice" />
+            <option value="$PROJECT_DIR$/threadtextdemo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
